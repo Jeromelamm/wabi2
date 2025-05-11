@@ -1,0 +1,2544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Special Person</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Loading screen -->
+    <div class="loading-screen">
+        <div class="loading-heart">❤️</div>
+        <p class="loading-text">Loading our memories...</p>
+    </div>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-icon">♪</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    
+    <!-- Navigation helper -->
+    <div class="navigation-helper">
+        <div class="nav-hint">❤️ Click the hearts and buttons to navigate! ❤️</div>
+    </div>
+    
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+    
+    <!-- Landing Page -->
+    <section id="landing" class="active parallax">
+        <h1 class="typing-text">Happy 4th Anniversary my love!</h1>
+        <p class="typing-text">Hawwo woob woob!</p>
+        <p>I hash planned sumfing special fow ush!</p>
+        <div class="heart" id="landing-heart" onclick="heartClickEffect(event)">❤️</div>
+        <div class="love-meter">
+            <div class="love-fill" id="love-fill"></div>
+            <div class="love-percentage" id="love-percentage">0%</div>
+        </div>
+    </section>
+    
+    <!-- Date Options -->
+    <section id="date-options" class="parallax">
+        <h1>Choose Ouw Next Adventuwe</h1>
+        <p class = "second-caption">I hash planned sum activities that I'd layk to bwing you on fow our special day my love! (I ish paying fow dish special occassion! I insist RAWRRR!)</p>
+        
+        <div class="date-cards">
+            <div class="date-card" onmousemove="tiltCard(event, this)" onmouseleave="resetTilt(this)">
+                <div class="photo-placeholder">Dinner Image</div>
+                <h3>A trip to Vietnam!</h3>
+                <p>Placeholder</p>
+                <button class="btn" onclick="showSection('romantic-dinner'); playButtonSound();">Choose This</button>
+            </div>
+            
+            <div class="date-card" onmousemove="tiltCard(event, this)" onmouseleave="resetTilt(this)">
+                <div class="photo-placeholder">Picnic Image</div>
+                <h3>A trip China!!</h3>
+                <p>Placeholder</p>
+                <button class="btn" onclick="showSection('sunset-picnic'); playButtonSound();">Choose This</button>
+            </div>
+            
+            <div class="date-card" onmousemove="tiltCard(event, this)" onmouseleave="resetTilt(this)">
+                <div class="photo-placeholder">Adventure Image</div>
+                <h3>A trip to somewhere in the PH!</h3>
+                <p>Placeholder</p>
+                <button class="btn" onclick="showSection('adventure-day'); playButtonSound();">Choose This</button>
+            </div>
+            
+            <div class="date-card" onmousemove="tiltCard(event, this)" onmouseleave="resetTilt(this)">
+                <div class="photo-placeholder">Surprise Image</div>
+                <h3>Mystery Option</h3>
+                <p>Placeholder</p>
+                <button class="btn" onclick="startProposal(); playSpecialSound();">Choose This</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Road Trip Memory -->
+    <section id="roadtrip" class="memory-detail-page parallax">
+        <button class="btn back-btn" onclick="goBackToMemoryLane(); playButtonSound();">Back to Memories</button>
+        <h1>Spontaneous Road Trip</h1>
+        <p>When we took a wrong turn and found that breathtaking view.</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 1</div>
+                <div class="gallery-caption">Placeholder</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 2</div>
+                <div class="gallery-caption">Placeholder</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 3</div>
+                <div class="gallery-caption">Placeholder</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 4</div>
+                <div class="gallery-caption">Placeholder</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- First Kiss Memory -->
+    <section id="first-kiss" class="memory-detail-page parallax">
+        <button class="btn back-btn" onclick="goBackToMemoryLane(); playButtonSound();">Back to Memories</button>
+        <h1>Our First Kiss</h1>
+        <p>That perfect summer night under the stars when everything changed.</p>
+        
+        <div class="gallery">
+            <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 1</div>
+            <div class="gallery-caption">Placeholder</div>
+        </div>
+        <div class="gallery-item">
+            <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 2</div>
+            <div class="gallery-caption">Placeholder</div>
+        </div>
+        <div class="gallery-item">
+            <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 3</div>
+            <div class="gallery-caption">Placeholder</div>
+        </div>
+        <div class="gallery-item">
+            <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 4</div>
+            <div class="gallery-caption">Placeholder</div>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Anniversary Memory -->
+    <section id="anniversary" class="memory-detail-page parallax">
+        <button class="btn back-btn" onclick="goBackToMemoryLane(); playButtonSound();">Back to Memories</button>
+        <h1>Anniversary Dinner</h1>
+        <p>Our special night celebrating another year of love.</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 1: Getting ready</div>
+                <div class="gallery-caption">You looking stunning as always, not knowing I had planned a special evening.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 2: Arriving at restaurant</div>
+                <div class="gallery-caption">The hostess leading us to that perfect corner table I'd requested weeks in advance.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 3: Candlelit table</div>
+                <div class="gallery-caption">The beautiful setting with roses on the table and candles glowing softly.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 4: Gift exchange</div>
+                <div class="gallery-caption">Opening our gifts to each other, both so thoughtful in completely different ways.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 5: Dessert celebration</div>
+                <div class="gallery-caption">The chef's special dessert with "Happy Anniversary" written in chocolate.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 6: Moonlit walk after</div>
+                <div class="gallery-caption">Walking through the park after dinner, talking about our favorite memories from the year.</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Support Memory -->
+    <section id="support" class="memory-detail-page parallax">
+        <button class="btn back-btn" onclick="goBackToMemoryLane(); playButtonSound();">Back to Memories</button>
+        <h1>When You Were There For Me</h1>
+        <p>The time when your love and support meant everything.</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 1: Holding hands</div>
+                <div class="gallery-caption">The way you held my hand through it all, steady and unwavering.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 2: The card you wrote</div>
+                <div class="gallery-caption">Your heartfelt words that gave me strength when I needed it most.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 3: Comfort food dinner</div>
+                <div class="gallery-caption">When you made my favorite childhood meal because you knew I needed that comfort.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 4: Movie night distraction</div>
+                <div class="gallery-caption">The pillow fort you built in the living room for our movie marathon escape.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 5: The sunrise walk</div>
+                <div class="gallery-caption">Getting me out of bed early to see the sunrise, reminding me of new beginnings.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 6: First smile after tough days</div>
+                <div class="gallery-caption">The moment I realized I was going to be okay because I had you by my side.</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interactive Love Quiz Section -->
+    <section id="love-quiz" class="parallax">
+        <h1>How Well Do You Know Me?</h1>
+        <p>Let's see if you remember these special moments...</p>
+        
+        <div class="quiz-container">
+            <div class="quiz-question" id="question-1">
+                <h3>Question 1: What was our first meal together?</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="checkAnswer(1, 'a')">Pizza</button>
+                    <button class="quiz-option" onclick="checkAnswer(1, 'b')">Ramen</button>
+                    <button class="quiz-option" onclick="checkAnswer(1, 'c')">Burgers</button>
+                </div>
+                <div class="quiz-feedback hidden" id="feedback-1"></div>
+            </div>
+            
+            <div class="quiz-question hidden" id="question-2">
+                <h3>Question 2: Where did we have our first kiss?</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="checkAnswer(2, 'a')">On the beach</button>
+                    <button class="quiz-option" onclick="checkAnswer(2, 'b')">Under the stars</button>
+                    <button class="quiz-option" onclick="checkAnswer(2, 'c')">At the airport</button>
+                </div>
+                <div class="quiz-feedback hidden" id="feedback-2"></div>
+            </div>
+            
+            <div class="quiz-question hidden" id="question-3">
+                <h3>Question 3: What did I give you on our first anniversary?</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="checkAnswer(3, 'a')">A love letter</button>
+                    <button class="quiz-option" onclick="checkAnswer(3, 'b')">A plush toy</button>
+                    <button class="quiz-option" onclick="checkAnswer(3, 'c')">A photo album</button>
+                </div>
+                <div class="quiz-feedback hidden" id="feedback-3"></div>
+            </div>
+            
+            <div class="quiz-results hidden" id="quiz-results">
+                <h2>Quiz Complete!</h2>
+                <p id="score-display">Your score: 0/3</p>
+                <div class="score-message" id="score-message"></div>
+                <button class="btn" onclick="showProposalSection(); playSpecialSound();">Continue to Something Special</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Proposal Section -->
+    <section id="proposal" class="parallax">
+        <div id="confetti-container"></div>
+        <img src="fav/mylove(1).jpg" alt="TSwift" class="photo">
+        <h1>My Love</h1>
+        <p> Placeholder</p>
+        <div class="proposal-text">Placeholder</div>
+        <div class="btn-container">
+            <button id="yes-btn" class="btn response-btn" onclick="showYesResponse(); playSpecialSound();">Yes!</button>
+            <button class="btn response-btn" onclick="showNoResponse(); playButtonSound();">Not Yet</button>
+        </div>
+        <div id="yes-response" class="hidden">
+            <h2>I ish naow the happiest pewson alive! ❤️</h2>
+            <p>I can't wait to start our forever together.</p>
+            <div class="heart" onclick="createRainbowHearts()">❤️</div>
+            <div class="fireworks" id="fireworks-container"></div>
+            <button class="btn" onclick="showSection('future-together'); playSpecialSound();">Our Future Together</button>
+        </div>
+        <div id="no-response" class="hidden">
+            <h2>Placeholder</h2>
+            <p>Placeholder</p>
+            <button class="btn" onclick="resetProposal(); playButtonSound();">Let me think again</button>
+        </div>
+    </section>
+    
+    <!-- Future Together Section -->
+    <section id="future-together" class="parallax">
+        <h1>Our Future Together</h1>
+        <p>I can't wait to build our life together. Here are some things I'm looking forward to:</p>
+        
+        <div class="future-dreams">
+            <div class="future-dream" onclick="dreamHover(this)">
+                <div class="dream-icon">🏠</div>
+                <h3>Our Home</h3>
+                <p>Finding our perfect cozy place where we can build our life together.</p>
+            </div>
+            
+            <div class="future-dream" onclick="dreamHover(this)">
+                <div class="dream-icon">✈️</div>
+                <h3>Adventures</h3>
+                <p>Exploring the world together, creating memories in new places.</p>
+            </div>
+            
+            <div class="future-dream" onclick="dreamHover(this)">
+                <div class="dream-icon">👨‍👩‍👧‍👦</div>
+                <h3>Family</h3>
+                <p>Growing our little family and filling our home with love and laughter.</p>
+            </div>
+            
+            <div class="future-dream" onclick="dreamHover(this)">
+                <div class="dream-icon">👵👴</div>
+                <h3>Growing Old</h3>
+                <p>Holding hands on a porch swing, looking back on a lifetime of love.</p>
+            </div>
+        </div>
+        
+        <div class="final-message">
+            <h2>I love you more than words can say</h2>
+            <p>Thank you for being my person, my home, my heart.</p>
+            <div class="heart" onclick="createRainbowHearts()">❤️</div>
+        </div>
+        
+        <button class="btn" onclick="showSection('landing'); playButtonSound();">Start Over</button>
+    </section>
+    
+    <!-- JavaScript for interactive elements -->
+    <script>
+        // Track current section for navigation
+        let currentSection = 'landing';
+        let previousMemorySection = 'initial-memory-lane';
+        
+        // Audio elements
+        const backgroundMusic = document.getElementById('background-music');
+        let isMusicPlaying = false;
+        
+        // Quiz variables
+        let quizScore = 0;
+        const correctAnswers = {
+            1: 'b', // Ramen
+            2: 'b', // Under the stars
+            3: 'c'  // Photo album
+        };
+
+        function setupVolumeControl() {
+    // Create volume control container
+    const volumeControl = document.createElement('div');
+    volumeControl.className = 'volume-control';
+    volumeControl.innerHTML = `
+        <div class="volume-slider-container">
+            <input type="range" min="0" max="100" value="30" class="volume-slider" id="volume-slider">
+            <div class="volume-level">30%</div>
+        </div>
+    `;
+    
+    // Add it next to audio control
+    const audioControl = document.querySelector('.audio-control');
+    document.body.appendChild(volumeControl);
+    
+    // Position it near the audio control
+    function positionVolumeControl() {
+        const audioRect = audioControl.getBoundingClientRect();
+        volumeControl.style.bottom = (window.innerHeight - audioRect.top + 10) + 'px';
+        volumeControl.style.right = (window.innerWidth - audioRect.right + 70) + 'px';
+    }
+    
+    positionVolumeControl();
+    window.addEventListener('resize', positionVolumeControl);
+    
+    // Initially hide it
+    volumeControl.style.display = 'none';
+    
+    // Toggle volume control when audio control is right-clicked or long-pressed
+    let longPressTimer;
+    
+    audioControl.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        toggleVolumeControl();
+    });
+    
+    audioControl.addEventListener('touchstart', function() {
+        longPressTimer = setTimeout(function() {
+            toggleVolumeControl();
+        }, 800); // Long press time in ms
+    });
+    
+    audioControl.addEventListener('touchend', function() {
+        clearTimeout(longPressTimer);
+    });
+    
+    // Function to toggle volume control visibility
+    function toggleVolumeControl() {
+        if (volumeControl.style.display === 'none') {
+            volumeControl.style.display = 'block';
+            // Show a hint about how to use
+            showSpeechBubble(audioControl, 'Adjust volume!');
+        } else {
+            volumeControl.style.display = 'none';
+        }
+    }
+    
+    // Handle volume changes
+    const volumeSlider = document.getElementById('volume-slider');
+    const volumeLevel = document.querySelector('.volume-level');
+    
+    volumeSlider.addEventListener('input', function() {
+        const volumeValue = this.value / 100;
+        backgroundMusic.volume = volumeValue;
+        volumeLevel.textContent = this.value + '%';
+        
+        // Also adjust sound effect volumes proportionally
+        window.soundEffectVolume = volumeValue;
+    });
+    }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize loading screen
+            const loadingScreen = document.querySelector('.loading-screen');
+            const loadingHeart = document.querySelector('.loading-heart');
+            
+            // Skip loading on click
+            loadingHeart.addEventListener('click', function() {
+                hideLoadingScreen();
+            });
+
+            setupVolumeControl();
+            
+            // Auto hide loading screen after 3 seconds
+            setTimeout(hideLoadingScreen, 3000);
+            
+            // Setup love meter animation
+            animateLoveMeter();
+            
+            // Setup floating hearts
+            createFloatingHearts();
+            
+            // Show navigation helper after a delay
+            setTimeout(function() {
+                document.querySelector('.navigation-helper').classList.add('show');
+                
+                // Hide navigation helper after 5 seconds
+                setTimeout(function() {
+                    document.querySelector('.navigation-helper').classList.remove('show');
+                }, 5000);
+            }, 5000);
+            
+            // Highlight the heart after a delay if no interaction
+            setTimeout(function() {
+                if (currentSection === 'landing') {
+                    document.getElementById('landing-heart').classList.add('highlight-heart');
+                    // Add speech bubble
+                    showSpeechBubble(document.getElementById('landing-heart'), 'Click me!');
+                }
+            }, 8000);
+            
+            // Custom cursor setup
+            const customCursor = document.querySelector('.custom-cursor');
+            document.addEventListener('mousemove', function(e) {
+                customCursor.style.display = 'block';
+                customCursor.style.left = e.clientX + 'px';
+                customCursor.style.top = e.clientY + 'px';
+            });
+        });
+        
+        // Hide loading screen
+        function hideLoadingScreen() {
+            const loadingScreen = document.querySelector('.loading-screen');
+            loadingScreen.style.opacity = '0';
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }
+        
+        // Create floating hearts background
+        function createFloatingHearts() {
+            const container = document.getElementById('floating-hearts-container');
+            const heartSizes = ['1rem', '1.5rem', '2rem', '2.5rem'];
+            const heartCount = 20;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.bottom = '-2rem';
+                heart.style.fontSize = heartSizes[Math.floor(Math.random() * heartSizes.length)];
+                heart.style.animationDuration = 15 + Math.random() * 30 + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.opacity = 0.1 + Math.random() * 0.3;
+                heart.style.transform = `scale(${0.5 + Math.random() * 0.5})`;
+                container.appendChild(heart);
+            }
+        }
+        
+        // Navigation function - Show a specific section
+        function showSection(sectionId) {
+            // Hide current section
+            document.getElementById(currentSection).classList.remove('active');
+            
+            // Show new section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update current section
+            currentSection = sectionId;
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Show memory detail page
+        function showMemoryDetail(memoryId) {
+            // Hide current section
+            document.getElementById(currentSection).classList.remove('active');
+            
+            // Remember previous section for back button
+            previousMemorySection = currentSection;
+            
+            // Show memory detail page
+            document.getElementById(memoryId).classList.add('active');
+            
+            // Update current section
+            currentSection = memoryId;
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Go back to memory lane
+        function goBackToMemoryLane() {
+            // Hide current section
+            document.getElementById(currentSection).classList.remove('active');
+            
+            // Show memory lane section
+            document.getElementById(previousMemorySection).classList.add('active');
+            
+            // Update current section
+            currentSection = previousMemorySection;
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Heart click effect
+        function heartClickEffect(event) {
+            // Remove highlight and speech bubble if present
+            event.target.classList.remove('highlight-heart');
+            const bubble = event.target.querySelector('.speech-bubble');
+            if (bubble) bubble.remove();
+            
+            // Create mini hearts burst effect
+            for (let i = 0; i < 10; i++) {
+                createMiniHeart(event.clientX, event.clientY);
+            }
+            
+            // Navigate to next section
+            if (currentSection === 'landing') {
+                showSection('initial-memory-lane');
+                playHeartbeatSound();
+            } else {
+                createRainbowHearts();
+            }
+        }
+        
+        // Create mini heart for burst effect
+        function createMiniHeart(x, y) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'fixed';
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+            heart.style.fontSize = Math.random() * 1 + 0.5 + 'rem';
+            heart.style.transform = 'translate(-50%, -50%)';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '1000';
+            
+            // Random direction
+            const angle = Math.random() * Math.PI * 2;
+            const distance = Math.random() * 100 + 50;
+            const duration = Math.random() * 1 + 0.5;
+            
+            heart.style.transition = `all ${duration}s ease-out`;
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`;
+                heart.style.opacity = '0';
+            }, 10);
+            
+            setTimeout(() => {
+                document.body.removeChild(heart);
+            }, duration * 1000);
+        }
+        
+        // Create rainbow hearts animation
+        function createRainbowHearts() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#f9d423', '#fc913a', '#a696c8'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerText = '❤';
+                    heart.style.position = 'fixed';
+                    heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.top = '100vh';
+                    heart.style.fontSize = Math.random() * 2 + 1 + 'rem';
+                    heart.style.zIndex = '1000';
+                    heart.style.pointerEvents = 'none';
+                    
+                    const animation = heart.animate([
+                        { transform: 'translateY(0)', opacity: 1 },
+                        { transform: `translateY(-${100 + Math.random() * 200}vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                    ], {
+                        duration: 4000 + Math.random() * 3000,
+                        easing: 'cubic-bezier(0.1, 0.8, 0.9, 0.2)'
+                    });
+                    
+                    document.body.appendChild(heart);
+                    
+                    animation.onfinish = () => {
+                        document.body.removeChild(heart);
+                    };
+                }, i * 100);
+            }
+            
+            playSpecialSound();
+        }
+        
+        // Toggle background music
+        function toggleAudio() {
+            if (isMusicPlaying) {
+                backgroundMusic.pause();
+                document.querySelector('.audio-icon').innerHTML = '♪';
+            } else {
+                backgroundMusic.play();
+                document.querySelector('.audio-icon').innerHTML = '♫';
+            }
+            isMusicPlaying = !isMusicPlaying;
+        }
+        
+        // Play sound effects
+        function playButtonSound() {
+            const audio = new Audio('https://assets.codepen.io/4358584/click1.mp3');
+            audio.volume = soundEffectVolume * 0.6; // Even quieter for button clicks
+            audio.play().catch(e => console.log("Button sound prevented:", e));
+        }
+
+        function playHeartbeatSound() {
+            const audio = new Audio('https://assets.codepen.io/4358584/heartbeat.mp3');
+            audio.volume = soundEffectVolume * 0.8; // Slightly quieter
+            audio.play().catch(e => console.log("Heartbeat sound prevented:", e));
+        }
+
+        function playSpecialSound() {
+            const audio = new Audio('https://assets.codepen.io/4358584/success.mp3');
+            audio.volume = soundEffectVolume; // Use the global volume setting
+            audio.play().catch(e => console.log("Special sound prevented:", e));
+        }
+        
+        // Animate love meter
+        function animateLoveMeter() {
+            const loveFill = document.getElementById('love-fill');
+            const lovePercentage = document.getElementById('love-percentage');
+            
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    loveFill.style.width = width + '%';
+                    lovePercentage.textContent = width + '%';
+                    
+                    if (width > 50) {
+                        lovePercentage.style.color = 'white';
+                    }
+                }
+            }, 20);
+        }
+        
+        // Tilt card effect
+        function tiltCard(event, card) {
+            const cardRect = card.getBoundingClientRect();
+            const centerX = cardRect.left + cardRect.width / 2;
+            const centerY = cardRect.top + cardRect.height / 2;
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            
+            const maxRotation = 15;
+            
+            const rotateX = ((centerY - mouseY) / (cardRect.height / 2)) * maxRotation;
+            const rotateY = ((mouseX - centerX) / (cardRect.width / 2)) * maxRotation;
+            
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        }
+        
+        function resetTilt(card) {
+            card.style.transform = 'rotateX(0) rotateY(0) translateY(-10px)';
+        }
+        
+        // Enlarge image modal
+        function enlargeImage(imgElement) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            
+            if (imgElement.tagName === 'IMG') {
+                modalImg.src = imgElement.src;
+            } else {
+                // For placeholder divs, we just show a colored background
+                modalImg.src = '/api/placeholder/800/500';
+            }
+            
+            modal.style.display = 'flex';
+        }
+        
+        function closeModal() {
+            document.getElementById('image-modal').style.display = 'none';
+        }
+        
+        // Quiz functionality
+        function checkAnswer(questionNum, answer) {
+            const feedbackElement = document.getElementById(`feedback-${questionNum}`);
+            feedbackElement.classList.remove('hidden');
+            
+            if (answer === correctAnswers[questionNum]) {
+                feedbackElement.textContent = 'Correct! 💕';
+                feedbackElement.style.color = 'green';
+                quizScore++;
+            } else {
+                feedbackElement.textContent = 'Not quite... the correct answer is highlighted 💜';
+                feedbackElement.style.color = 'red';
+            }
+            
+            // Highlight correct answer
+            const options = document.querySelectorAll(`#question-${questionNum} .quiz-option`);
+            options.forEach(option => {
+                option.disabled = true;
+                if (option.textContent.toLowerCase().charAt(0) === correctAnswers[questionNum]) {
+                    option.style.backgroundColor = 'rgba(78, 205, 196, 0.7)';
+                    option.style.fontWeight = 'bold';
+                }
+            });
+            
+            // Move to next question or show results
+            setTimeout(() => {
+                if (questionNum < 3) {
+                    document.getElementById(`question-${questionNum}`).classList.add('hidden');
+                    document.getElementById(`question-${questionNum + 1}`).classList.remove('hidden');
+                } else {
+                    // Show results
+                    document.querySelectorAll('.quiz-question').forEach(q => q.classList.add('hidden'));
+                    const resultsElement = document.getElementById('quiz-results');
+                    resultsElement.classList.remove('hidden');
+                    
+                    document.getElementById('score-display').textContent = `Your score: ${quizScore}/3`;
+                    
+                    const messageElement = document.getElementById('score-message');
+                    if (quizScore === 3) {
+                        messageElement.textContent = 'Perfect score! You know me so well! ❤️';
+                        messageElement.style.color = 'green';
+                    } else if (quizScore >= 1) {
+                        messageElement.textContent = 'Not bad! There\'s always more to learn about each other! 💕';
+                        messageElement.style.color = 'orange';
+                    } else {
+                        messageElement.textContent = 'That\'s okay! Let\'s keep creating memories together! 💜';
+                        messageElement.style.color = 'purple';
+                    }
+                }
+            }, 1500);
+        }
+        
+        // Show proposal section
+        function showProposalSection() {
+            showSection('proposal');
+            createConfetti();
+        }
+        
+        // Start proposal experience
+        function startProposal() {
+            showSection('memory-lane');
+        }
+        
+        // Show yes response
+        function showYesResponse() {
+            document.getElementById('yes-response').classList.remove('hidden');
+            document.querySelector('#proposal .btn-container').classList.add('hidden');
+            createConfetti();
+        }
+        
+        // Show no response
+        function showNoResponse() {
+            document.getElementById('no-response').classList.remove('hidden');
+            document.querySelector('#proposal .btn-container').classList.add('hidden');
+        }
+        
+        // Reset proposal
+        function resetProposal() {
+            document.getElementById('no-response').classList.add('hidden');
+            document.querySelector('#proposal .btn-container').classList.remove('hidden');
+        }
+        
+        // Create confetti
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#ff6b6b', '#4ecdc4', '#f9d423', '#fc913a', '#a696c8', '#ffffff'];
+            const confettiCount = 200;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.opacity = Math.random() + 0.5;
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                
+                container.appendChild(confetti);
+                
+                // Remove confetti after animation completes
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+        
+        // Dream hover effect
+        function dreamHover(dreamElement) {
+            dreamElement.style.transform = 'scale(1.05)';
+            dreamElement.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+            
+            setTimeout(() => {
+                dreamElement.style.transform = 'scale(1)';
+                dreamElement.style.boxShadow = 'none';
+            }, 500);
+        }
+        
+        // Play video
+        function playVideo(videoId) {
+            // This would normally create a video modal, but we're using placeholders
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            
+            modalImg.src = '/api/placeholder/800/450';
+            modal.style.display = 'flex';
+        }
+        
+        // Show speech bubble
+        function showSpeechBubble(element, text) {
+            // Remove existing bubbles
+            const existingBubble = element.querySelector('.speech-bubble');
+            if (existingBubble) existingBubble.remove();
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'speech-bubble';
+            bubble.textContent = text;
+            bubble.style.opacity = '0';
+            element.appendChild(bubble);
+            
+            setTimeout(() => {
+                bubble.style.opacity = '1';
+                bubble.style.transform = 'translateX(-50%) translateY(0)';
+            }, 10);
+            
+            setTimeout(() => {
+                bubble.style.opacity = '0';
+                bubble.style.transform = 'translateX(-50%) translateY(10px)';
+                
+                setTimeout(() => {
+                    if (bubble.parentNode === element) {
+                        element.removeChild(bubble);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Add these functions to your existing JavaScript
+
+// Update the showSection function to handle the year navigation
+function showSection(sectionId) {
+    // Hide current section
+    document.getElementById(currentSection).classList.remove('active');
+    
+    // Show new section
+    document.getElementById(sectionId).classList.add('active');
+    
+    // Update current section
+    currentSection = sectionId;
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+    
+    // Play transition sound
+    if (sectionId.startsWith('year-')) {
+        playSpecialSound();
+    } else {
+        playButtonSound();
+    }
+}
+
+// Function to navigate from memory detail back to the correct year
+function goBackToYear(yearId) {
+    // Hide current section
+    document.getElementById(currentSection).classList.remove('active');
+    
+    // Show year section
+    document.getElementById(yearId).classList.add('active');
+    
+    // Update current section
+    currentSection = yearId;
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+    
+    // Play button sound
+    playButtonSound();
+}
+
+// Update the landing page navigation to include the year selection option
+function updateInitialNavigation() {
+    // Add a button to the landing section to navigate to years
+    const landingSection = document.getElementById('landing');
+    const btnContainer = landingSection.querySelector('.btn-container') || landingSection;
+    
+    const yearsButton = document.createElement('button');
+    yearsButton.className = 'btn btn-3d';
+    yearsButton.textContent = 'Browse Memowies by Yeaw!';
+    yearsButton.onclick = function() { showSection('year-selection'); };
+    
+    // Add the button to the landing page
+    btnContainer.appendChild(yearsButton);
+}
+
+// Call this function when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Other initialization code...
+    
+    // Add the year navigation button
+    updateInitialNavigation();
+});
+    </script>
+</body>
+</html>
+    <!-- Celebration Memory -->
+    <section id="celebration" class="memory-detail-page parallax">
+        <button class="btn back-btn" onclick="goBackToMemoryLane(); playButtonSound();">Back to Memories</button>
+        <h1>Your Promotion Party</h1>
+        <p>Celebrating your hard work and success with everyone who loves you.</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 1: The setup</div>
+                <div class="gallery-caption">Your friends helping me decorate while you were at work, rushing before you got home.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 2: Your surprised face</div>
+                <div class="gallery-caption">The pure shock when everyone jumped out. I thought you might drop your bag!</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 3: The champagne toast</div>
+                <div class="gallery-caption">When your boss gave that heartfelt speech about how proud they were of you.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 4: Friends celebrating</div>
+                <div class="gallery-caption">Everyone who's been there through your journey, celebrating your success.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 5: Dancing together</div>
+                <div class="gallery-caption">That impromptu dance when your favorite song came on. You were glowing.</div>
+            </div>
+            <div class="gallery-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Photo 6: End of night selfie</div>
+                <div class="gallery-caption">Exhausted but so proud. I'll never forget how happy you looked that night.</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Romantic Dinner -->
+    <section id="romantic-dinner" class="parallax">
+        <h1>A trip to Vietnam!</h1>
+        <div class="photo-placeholder" onclick="enlargeImage(this)">HCMC Image</div>
+        <p>Placeholder</p>
+        <div class="btn-container">
+            <button class="btn" onclick="showSection('date-options'); playButtonSound();">Choose Another Option</button>
+            <button class="btn" onclick="startProposal(); playSpecialSound();">Thewe's mawr!</button>
+        </div>
+    </section>
+    
+    <!-- Adventure Day -->
+    <section id="adventure-day" class="parallax">
+        <h1>Placeholder</h1>
+        <div class="photo-placeholder" onclick="enlargeImage(this)">Placeholder</div>
+        <p>Placeholder</p>
+        <div class="btn-container">
+            <button class="btn" onclick="showSection('date-options'); playButtonSound();">Choose Another Option</button>
+            <button class="btn" onclick="startProposal(); playSpecialSound();">Thewe's mawr!</button>
+        </div>
+    </section>
+
+    <!-- Year Selection Page -->
+<section id="year-selection" class="parallax">
+    <h1>Our Journey Through The Years</h1>
+    <p>Expwore our special memories year by year!</p>
+    
+    <div class="year-collages">
+        <!-- 2022 Year Collage -->
+        <div class="year-collage" onclick="showSection('year-2022')">
+            <div class="year-title">2022</div>
+            <div class="collage-container">
+                <!-- Overlapping images create a collage effect -->
+                <img src="sg1/first-taym.jpg" alt="2022 Memory" class="collage-img collage-img-1">
+                <img src="sg2/coolwabi.jpg" alt="2022 Memory" class="collage-img collage-img-2">
+                <img src="sg3/goldenhouw.jpg" alt="2022 Memory" class="collage-img collage-img-3">
+            </div>
+            <div class="year-caption">When it all began! ❤️</div>
+        </div>
+        
+        <!-- 2023 Year Collage -->
+        <div class="year-collage" onclick="showSection('year-2023')">
+            <div class="year-title">2023</div>
+            <div class="collage-container">
+                <!-- Overlapping images create a collage effect -->
+                <img src="bohol1/flight.jpg" alt="2023 Memory" class="collage-img collage-img-1">
+                <img src="sg4/feed.jpg" alt="2023 Memory" class="collage-img collage-img-2">
+                <img src="sg5/pickup.jpg" alt="2023 Memory" class="collage-img collage-img-3">
+                <img src="bohol2/cover.jpg" alt="2023 Memory" class="collage-img collage-img-4">
+                <img src="bohol2/bunni.jpg" alt="2023 Memory" class="collage-img collage-img-5">
+            </div>
+            <div class="year-caption">A year of adventures togethew! ✈️</div>
+        </div>
+        
+        <!-- 2024 Year Collage -->
+        <div class="year-collage" onclick="showSection('year-2024')">
+            <div class="year-title">2024</div>
+            <div class="collage-container">
+                <!-- Overlapping images create a collage effect -->
+                <img src="sg6/wamen.jpg" alt="2024 Memory" class="collage-img collage-img-1">
+                <img src="thailand/cover.jpg" alt="2024 Memory" class="collage-img collage-img-2">
+                <img src="tswift/awwival.jpg" alt="2024 Memory" class="collage-img collage-img-3">
+                <img src="sg7/0.jpg" alt="2024 Memory" class="collage-img collage-img-4">
+                <img src="vietnam/2.jpg" alt="2024 Memory" class="collage-img collage-img-5">
+            </div>
+            <div class="year-caption">Making new memories!</div>
+        </div>
+
+        <!-- 2025 Year Collage -->
+        <div class="year-collage" onclick="showSection('year-2025')">
+            <div class="year-title">2025</div>
+            <div class="collage-container">
+                <!-- Overlapping images create a collage effect -->
+                <img src="sg6/wamen.jpg" alt="2024 Memory" class="collage-img collage-img-1">
+                <img src="thailand/cover.jpg" alt="2024 Memory" class="collage-img collage-img-2">
+                <img src="tswift/awwival.jpg" alt="2024 Memory" class="collage-img collage-img-3">
+                <img src="sg7/0.jpg" alt="2024 Memory" class="collage-img collage-img-4">
+                <img src="vietnam/2.jpg" alt="2024 Memory" class="collage-img collage-img-5">
+            </div>
+            <div class="year-caption">New yeaw new memowiesh!!</div>
+        </div>
+    </div>
+    
+    <button class="btn btn-3d" onclick="showSection('landing')">Back to Home</button>
+</section>
+
+<!-- 2022 Memories Section -->
+<section id="year-2022" class="year-memories">
+    <h1>Our 2022 Memories ❤️</h1>
+    <p>Dish wash when our journey began!</p>
+    
+    <div class="memory-container">
+        <div class="memory-item">
+            <img src="sg1/first-taym.jpg" alt="First Meeting" class="photo">
+            <p class = "initial-caption">Woobi's fiwsh taym in sg! (alsho our fiwsh taym meeting irl!) 👩‍❤️‍💋‍👨</p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('first-taym')">Shee mawr photos</button>
+        </div>
+        
+        <div class="memory-item">
+            <img src="sg2/coolwabi.jpg" alt="Second Visit" class="photo">
+            <p class = "initial-caption">Woob's second time in sg! ❤️</p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('second-taym')">Shee Mawr Photos</button>
+        </div>
+        
+        <div class="memory-item">
+            <img src="sg3/goldenhouw.jpg" alt="Third Visit" class="photo">
+            <p class = "initial-caption">Wabi's third time in sg heheh (tenksh fow alwaysh coming to shee me) ❤️❤️</p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('third-taym')">Shee Mawr Photos</button>
+        </div>
+    </div>
+    
+    <div class="back-button-container">
+        <button class="btn back-years-btn" onclick="showSection('year-selection')">Back to Years</button>
+    </div>
+</section>
+
+<!-- 2023 Memories Section -->
+<section id="year-2023" class="year-memories">
+    <h1>Our 2023 Memories ✈️</h1>
+    <p>A year of adventures togethew!</p>
+    
+    <div class="memory-container">
+        <div class="memory-item">
+            <img src="bohol1/flight.jpg" alt="First Bohol Trip" class="photo">
+            <p class = "initial-caption">Fiwsh taym flying ovew to shee wabi!! (fwish taym evew flying actuawwy)❤️✈️ </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('bohol')">Shee Mawr Photos</button>
+        </div>
+        
+        <div class="memory-item">
+            <img src="sg4/feed.jpg" alt="Fourth SG Visit" class="photo">
+            <p class = "initial-caption">Woobi in sg again!! hehehe</p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('fourth-taym')">Shee Mawr Photos</button>
+        </div>
+        
+        <div class="memory-item">
+            <img src="sg5/pickup.jpg" alt="Fifth SG Visit" class="photo">
+            <p class = "initial-caption">my wabi visitsh me again!❤️ </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('fifth-taym')">Shee mawr photos</button>
+        </div>
+
+        <div class="memory-container">
+            <div class="memory-item">
+            <img src="bohol2/cover.jpg" alt="Second Bohol Trip" class="photo">
+            <p class = "initial-caption">Wabi 1 coming bacc to Bohol!🥥✈️❤️🏝 </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('bohol2')">Shee mawr photos</button>
+        </div>
+    </div>
+    
+    <div class="back-button-container">
+        <button class="btn back-years-btn" onclick="showSection('year-selection')">Back to Years</button>
+    </div>
+</section>
+
+<!-- 2024 Memories Section -->
+<section id="year-2024" class="year-memories">
+    <h1>Our 2024 Memories 🏝️</h1>
+    <p>Making new memories!</p>
+    <div class="memory-container">    
+        <!-- You can add more 2024 memories here as they happen -->
+        <div class="memory-item">
+            <img src="sg6/wamen.jpg" alt="Sixth SG visit" class="photo">
+            <p class = "initial-caption">my wabi visitsh me again!❤️ </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('sixth-taym')">Shee mawr photos</button>
+        </div>
+
+        <div class="memory-item">
+            <img src="thailand/cover.jpg" alt="Thailand" class="photo">
+            <p class = "initial-caption">Thailand twip wid woobi's famiwy! </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('thailand')">Shee mawr photos</button>
+        </div>
+
+        <div class="memory-item">
+            <img src="tswift/conc1.jpg" alt="TSwift" class="photo">
+            <p class = "initial-caption">Taylor swift week!! </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('tswift')">Shee mawr photos</button>
+        </div>
+
+        <div class="memory-item">
+            <img src="sg7/2.jpg" alt="7" class="photo">
+            <p class = "initial-caption">Wabi's post gwad twip!</p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('seventh')">Shee mawr photos</button>
+        </div>
+
+        <div class="memory-item">
+            <img src="vietnam/2.jpg" alt="7" class="photo">
+            <p class = "initial-caption">HCMC twip! 🇻🇳✈️ </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('vietnam')">Shee mawr photos</button>
+        </div>
+
+        <div class="memory-item">
+            <img src="danang/0.jpg" alt="7" class="photo">
+            <p class = "initial-caption">Danang! </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('danang')">Shee mawr photos</button>
+        </div>
+
+        <div class="memory-item coming-soon">
+            <div class="photo-placeholder">Coming Soon</div>
+            <p class = "initial-caption">More adventures to come in 2024! 💕</p>
+        </div>
+    </div>
+</div>
+<div class="back-button-container">
+    <button class="btn back-years-btn" onclick="showSection('year-selection')">Back to Years</button>
+</div>
+</section>
+
+<!-- 2025 Memories Section -->
+<section id="year-2025" class="year-memories">
+    <h1>Our 2025 Memories 🏝️</h1>
+    <p>New yeaw new memowiesh!!</p>
+    <div class="memory-container">    
+        <!-- You can add more 2025 memories here as they happen -->
+        <div class="memory-item coming-soon">
+            <div class="photo-placeholder">Coming Soon</div>
+            <p>More adventures to come in 2024! 💕</p>
+        </div>
+    </div>
+</div>
+<div class="back-button-container">
+    <button class="btn back-years-btn" onclick="showSection('year-selection')">Back to Years</button>
+</div>
+</section>
+    
+    <!-- Initial Memory Lane (before date options) -->
+    <section id="initial-memory-lane">
+        <h1>Our Journey togethew so far!</h1>
+        <p class = "second-caption">Befowe anyfing else, lesh take a stroll down the memowy lane da wabis hash had togethew!</p>
+        <button class="btn btn-3d" onclick="showSection('landing')">Back to Home</button>
+        <div class="memory-container">
+            <div class="memory-item">
+                <img src="sg1/first-taym.jpg" alt="First Date" class="photo">
+                <p class = "initial-caption">Woobi's fiwsh taym in sg! (alsho our fiwsh taym meeting irl!) 👩‍❤️‍💋‍👨</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('first-taym')">Shee mawr photos</button>
+            </div>
+           
+            <div class="memory-item">
+                <img src="sg2/coolwabi.jpg" alt="First Date" class="photo">
+                <p class = "initial-caption">Woob's second time in sg! ❤️</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('second-taym')">Shee Mawr Photos</button>
+            </div>
+           
+            <div class="memory-item">
+                <img src="sg3/goldenhouw.jpg" alt="First Date" class="photo">
+                <p class = "initial-caption">Wabi's third time in sg heheh (tenksh fow alwaysh coming to shee me) ❤️❤️</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('third-taym')">Shee Mawr Photos</button>
+            </div>
+           
+            <div class="memory-item">
+                <img src="bohol1/flight.jpg" alt="First Date" class="photo">
+                <p class = "initial-caption">Fiwsh taym flying ovew to shee wabi!! (fwish taym evew flying actuawwy)❤️✈️ </p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('bohol')">Shee Mawr Photos</button>
+            </div>
+           
+            <div class="memory-item">
+                <img src="sg4/feed.jpg" alt="First Date" class="photo">
+                <p class = "initial-caption">Woobi in sg again!! hehehe</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('fourth-taym')">Shee Mawr Photos</button>
+            </div>
+           
+            <div class="memory-item">
+                <img src="sg5/pickup.jpg" alt="First Date" class="photo">
+                <p class = "initial-caption">my wabi visitsh me again!❤️ </p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('fifth-taym')">Shee mawr photos</button>
+            </div>
+    
+            <div class="memory-item">
+                <img src="bohol2/cover.jpg" alt="First Date" class="photo">
+                <p class = "initial-caption">Wabi 1 coming bacc to Bohol!🥥✈️❤️🏝 </p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('bohol2')">Shee mawr photos</button>
+            </div>
+
+            <div class="memory-item">
+                <img src="sg6/wamen.jpg" alt="First Date" class="photo">
+                <p class = "initial-caption">My loverrrrrr visiting me again!!! </p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('sixth-taym')">Shee mawr photos</button>
+            </div>
+
+            <div class="memory-item">
+                <img src="thailand/cover.jpg" alt="Thailand" class="photo">
+                <p class = "initial-caption">Thailand twip wid woobi's famiwy! </p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('thailand')">Shee mawr photos</button>
+            </div>
+    
+            <div class="memory-item">
+                <img src="tswift/conc1.jpg" alt="TSwift" class="photo">
+                <p class = "initial-caption">Taylor swift week!! </p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('tswift')">Shee mawr photos</button>
+            </div>
+    
+            <div class="memory-item">
+                <img src="sg7/2.jpg" alt="7" class="photo">
+                <p class = "initial-caption">Wabi's post gwad twip!</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('seventh')">Shee mawr photos</button>
+            </div>
+    
+            <div class="memory-item">
+                <img src="vietnam/2.jpg" alt="7" class="photo">
+                <p class = "initial-caption">HCMC twip! 🇻🇳 </p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('vietnam')">Shee mawr photos</button>
+            </div>
+        </div>
+
+        <div class="memory-item">
+            <img src="danang/0.jpg" alt="7" class="photo">
+            <p class = "initial-caption">Danang and Hoi An! ✈️🏮 </p>
+            <button class="btn memory-btn" onclick="showMemoryDetail('danang')">Shee mawr photos</button>
+        </div>
+        
+        <button class="btn" onclick="showSection('date-options')">Naow lesh plan our next Adventuwe!</button>
+    </section>
+    
+    <!-- Memory Lane (before proposal) -->
+    <section id="memory-lane">
+        <h1>Spme of my favourite memories of us!</h1>
+        <p>Hewe's some of my fav memories of us!💕</p>
+        
+        <div class="memory-container">
+            <div class="memory-item">
+                <div class="photo-placeholder">Placeholder</div>
+                <p>Placeholder</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('first-kiss')">Shee mawr photos</button>
+            </div>
+            
+            <div class="memory-item">
+                <div class="photo-placeholder">Placeholder</div>
+                <p>Placeholder</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('anniversary')">Shee mawr photos</button>
+            </div>
+            
+            <div class="memory-item">
+                <div class="photo-placeholder">Placeholder</div>
+                <p>Placeholder</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('support')">Shee mawr photos</button>
+            </div>
+        </div>
+        
+        <button class="btn" onclick="showProposalSection()">Continue!</button>
+    </section>
+    
+    <!-- Add Memory Detail Pages -->
+    <!-- First Date Memory -->
+    <section id="first-taym" class="memory-detail-page">
+        <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+        <h1>Our first taym meeting!</h1>
+        <p class = "second-caption">Woobi's fiwsh taym in sg ❤️</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="sg1/shelfee.png" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">One of our fiwsh pwopew pic togethew!! (i was sho newvoush shtill)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg1/shelfee1.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">When woobi wanted to looky at miniso XD</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg1/wabi-hide.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Da cootie woobi hiding behind me duwing pictuwe!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg1/botak.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Botak shelfee haiya ( but i bet you layk it 😠)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg1/wamen.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">When I wash hungwy at aiwpowt but evewithing wash closed sho da wabi insisted fow ush to eat wamen heheh</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="sg1/wifey.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da wabi calling me wifey rawr!</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Woob's second time in sg -->
+    <section id="second-taym" class="memory-detail-page">
+        <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+        <h1>Wabi's fiwsh solo trip to sg</h1>
+        <p class = "second-caption">Woobi's 2nd time in sg!!</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="sg2/fitchack.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">fit chack fow when i picked wabi up fow wabi's 2nd time in sg 👀</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg2/jinjja.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Ordered in Jinjja chican becosh we wash too lazy to go out!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg2/jinjja2.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">My cootie wabi heheh</div>
+            </div>
+
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="sg2/cootie.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">me and my woobi!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="sg2/marina.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">wabi at marina bay! ft. my expert level foto taking skillsh at dat taym XD</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg2/shelfee1.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Shelfee taym!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg2/shelfee2.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Looky haow coot my wabi ish</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="sg2/shelfee3.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Mwah!</div>
+            </div>
+
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="sg2/awm-wrestle.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">arm wrestling wid da wabi befowe our fud came XD</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="sg2/jj.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">wabi's fiwsh shweep bacc at cottage wid vewy fiwsh soft toy gift heheh our fiwsh child JJ!</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Wabi's third time in sg -->
+    <section id="third-taym" class="memory-detail-page">
+        <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+        <h1>My baby's thiwd taym in sg!!</h1>
+        <p class = "second-caption">My baby looksh sho cooooooot!!!</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="sg3/pwata.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Woobi's requested meal aftuw lasht taym! mushwoom chish pwata om nyom nyom 🍽</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/mawinabay.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">da wabis set out to MBS for adventuwe!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/gondola.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Gotsh fwee gondola tix fwom wandom pipol! hehehe</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/uhmidk.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Post-gwab pictuwe (we eawned $5 in an houw XD)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/saizeriyaa.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Post-gwab meal!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/dessewt.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">dessewt fwom chateraise nyehehehe</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/dunkinmochi.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woobi myanching dunkin mochi donut and falling in love wid it heheh coot!!!!!! </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/sushi!!!.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Woobi's fiwsh sushi belt expewience! 🍣</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/tiongbahru!.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">our fiwsh tiong bahru bakery experience togethew! (i may hash ovew ordewed heheh sowee)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/ducknoodlesh.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woobi's fiwsh taym twying duck noodle! 🦤</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/annoyed.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woobi annoyed at my foto taking skillsh XD (post botanic gawdens!!)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/goldenhouw.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">headingsh hawm by bus! golden houwwww ☀️</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/weavingagain.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">lasht pic of ush fow dish visit 😭 bai bai</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg3/children.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woobi bacc hawm, naow wid two of our childwen!! JJ and MJ!!</div>
+            </div>
+            
+
+        </div>
+    </section>
+    
+    <!-- Fiwsh Bohol twip!! -->
+    <section id="bohol" class="memory-detail-page">
+        <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+        <h1>My fiwsh twip to Bohol!!!</h1>
+        <p class = "second-caption">When I tooky my fiwsh flight evew to shee wabi!!</p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="bohol1/cebu.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Awwived in cebu and otw to fewwy tewminal to go bohol!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/awwival.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Awwived in bohol aftuw 2 hrsh!! weeeeeeee 🏝</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/moto.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">while queuing fow jabbee dwive thru we saw a moto stashed in the back of a car XD</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/jabbee.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">fiwsh meal aftuw awwiving in Bohol! nyom nyom bucket fwiesh</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/vwoom!.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Vwoom!!!!</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol1/dwivee.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da wabi filming me dwivey heheh</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/sunrise.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">da next mawnin aftuw awwival!! weady to conquer bohol wid dish cootie wabi nyehehe</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/filipinobf.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">fiwsh taym twying filipino bfast in panglao!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/commoncrew.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">posht bwekky cawfee! ish fiwsh taym woobi let me twy common crew!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/pizzaa.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">gotsh takeout pizza and carbonara!! food wid a gud view (my wabi ish da view)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/sunset.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">caughtsh da sunset wid wabi heheh</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol1/bwidge!.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">Outsh fow adventuwe taym!! featuwing da bwidgeee</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol1/manmade.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">Manmade fowest!! I wemembew being sho amazed HAHAHA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/tarsiers.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">tarsiew sanctuawy!!! (spot da tarsier(s))</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol1/welcomechoc.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">weaching choccy hill townside!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/choccy.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">my baby wid choccy hillsh heheh</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/rest.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">da wabi hadsh to resty 3/4 way up laaa!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/choccy1.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">weached da top fow dish view!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/tarsiers.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">tarsiew sanctuawy!!! (spot da tarsier(s))</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/samgyup.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">fiwsh taym at taskus samgyup!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/kish.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">wabi 1 headingsh hawm na 😢</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol1/flighthawm.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">bai bai fow naow Bohol! I'll be bacc shoon 🥥✈️🏝</div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <section id="fourth-taym" class="memory-detail-page">
+        <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+        <h1>wabi's fouwth taym in sg!! I wuvv youuuuuuuuu ❤️</h1>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="sg4/remake.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Boughtsh yewwow sheetsh for wabi's awwival!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg4/dtf.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woobi and hew smol bowl of dtf beef noodlesh! cutiee</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg4/tofu.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">wabi vs tofu</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg4/pwata!.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">My cootie wabi heheh</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg4/imkim.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">im kim's kbbq wid wabi!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg4/wacist.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">bonus pic of wabi being wacist!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg4/shweep.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woob woob bacc hawm fwom dish twip</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fifth-taym" class="memory-detail-page">
+        <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+        <h1>wabi's fifth taym in sg! heheh showee wann</h1>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="sg5/firstride.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">Wabi's first ride after i got my license!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/mama.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">pic with mama at bedok!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/sgspag.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">wabi's requested fiwsh meal in sg, sg spaghetti!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/chican.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">expensiv chican waysh XD</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/chicanwaysh.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">hadsh chican waysh at downstaiwsh next day and da wabi pweferred dish</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/banmian.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">wabi twying banmian fow fiwsh taym laa</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/newton.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">da wabi and famiwy at newton!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/msgprawn.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">msg pwawn heh</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/newt.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">chican wingsh and satay!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/kaya.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">when i picked wabi up posht gym fow kaya toastiesh and we argued about cappuccino</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/homecook.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woobi's fiwsh twy of my fav homecooked chican cutlet!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/signoodle.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">signatuwe noodlesh specially pwepared with wuv by me heheh</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/evil.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">evil wabi😣</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/suki.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">sukiyaa! (when we were still amateurs)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/ayskwem.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">I ❤️ U mawrrr!!! </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/head.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">me and woobi scwatching head heheh </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/car.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woobi test dwiving laaa!! maybe gonna buy nissan? 🤐 </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/wagon.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">my cootie babi and g wagon </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/litol.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">looky!! litol wabi and rawry!! heheh</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="sg5/goat.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da wabi's goat fawm excursion!!</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="sg5/coconut.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">wan of my fav vidsh of wabi of all taym wan!!! HAHAHA ❤️❤️</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/shweep1.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">my cootie baby na ❤️</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/uhm.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">looky coot looky coot!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="sg5/hawm.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woobi hawm and ded fwom twavelsh heheh tenksh fow coming to shee me!!</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="bohol2" class="memory-detail-page">
+        <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+        <h1>My second taym in bohol!! 2 weeksh dish taym!!</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/arrival.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da wabi 1's awwival!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/hungwy.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">heheh mango shake! we gotsh mago shake and leylam becosh i wash hungwy heheh</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/scawy.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">dat scawy fewwy ride that wabi and i were laffy laffy until wabi fwoze up XD cootie </div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/woom.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">woom dat wash chosen by wabi! (fuak u neil)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/milktea.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">we wentsh out to getsh stuffiesh and boughtsh milktea!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/myview.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">first meal in bohol aftuw settling down!! (my view)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/herview.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">your view :D</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/cawfee.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">gotsh cawfee aftuw meal!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/chill.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">chilling at south palms aftuw our meal laa</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/chill2.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">da woob woob looky coot!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/southpalm.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">awkwawd pose!! but looky at da white sandsh</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/chill3.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">swing swing!! weeeeeeee</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/chill4.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">thwowback to when i wash stwuggling on da hammock and woob woob wash laffy!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/bunni.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">da woobi and bunny!</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/wabbit.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">me petting da bunniesh wid da leaf while wabi asky me pet it wid my handsh XD</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/buuuni.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">i wash sho scawed da bunny wud bitesh me HAHAHA</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/abuse.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">aboosing da bunnies because they wefuse to eat my leaf!</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/pony.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">wabi riding a pony!!</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/horse.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">my tuwn!!</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/duck.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">quack quack or pawkawk?</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/mango.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">weww desewved mango shake aftuw long walk undew hawt sun</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/halo.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">fiwsht taym twying halo halo!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/urview.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">jabbee for bwekky! icedddd teaaaaa</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/bwekki.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">my view!</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/swim.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">me in shwim showtsh and jersey wabi gave me, weady to shwim!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/s2butt.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">going in!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/s2proud.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">our catch! yack i sho phat la</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/s2starfish.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">our catch!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/s2shelfee.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">me and my baby ❤️</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/pomelo.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">me being amazed u hadsh pomelo at cottage</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/pork.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">dinner with lola and siblings!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/dinner.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">dinner with family during ur dada's bday!!</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/dance.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">when lola made me dance and i got embawassed 😭</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/mama.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">instax pictuwe wid mama!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/guitar.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">me playing guitaw one day maybe?</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/inasal.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">fiwsh taym discovering da greatest food on eawth 🍚🍗</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/happy.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">about to discovew happiness</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/wait.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">shelfee while waiting fow woobi to come bacc fwom skool!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/chef.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">chef jerome wid a belly</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/corned.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">our fiwsh cooky in bohol! corned beef and eggsh</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/homecook.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">hawm cooked again! spam and egg waysh! wid snappew and miwk</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/figa.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">figawooo!! besht aglio olio ive hadsh</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/figb.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">my beautiful view while eating figawoo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/inasal1.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">dining in at inasal wid unli waysh and dousing it all in chcican oil! nyom nyoMMM</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/dessewt.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">dessewt taym wid woobi!! ube ayskweemmmm</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/wamen.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">wamen!!!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/pizzaa.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">pizza and carbonara!! ovew-owdewing mastewclassh by wabi 1</div>
+            </div>
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="bohol2/manual.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">uhmmm cleawly manual washnt ash eashy ash i thoughtsh it wud be</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="bohol2/coot.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">figawo again wid my cootie baby❤️</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/off.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">da mawnin dat i hash to weave bohol alweady 😭</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/ferry.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">on da fewwy! wabi sho happy<picture></picture></div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/view.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">da viewwww<picture></picture></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="bohol2/goodbye2.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">our iconic cebu aiwpowt <picture></picture></div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/goodbye.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">kish kish!<picture></picture></div>
+            </div>
+            <div class="gallery-item">
+                <img src="bohol2/weave.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <div class="gallery-caption">bai bai fow naow bohol! i'll be bacc!! 🥥🏝❤️ (mawr fow my wabi tho)<picture></picture></div>
+            </div>
+            
+        </div>
+    </section>
+
+<section id="sixth-taym" class="memory-detail-page">
+    <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+    <h1>da wabis reunite again!!</h1>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="sg6/pickup.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">picking up da wabi!!! (i think dish fiwsh taym i boughtsh wabi flowersh heheh) ❤️❤️</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg6/botanics.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">da wabi's adventure to botanic gawdensh!</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="sg6/race.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">wacing in slippewsh laa then we gotsh scolded HAHAHA</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg6/luggage.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">picking up a luggage that wabi liked fwom carousell!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg6/meditate.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">ohmmmm</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg6/leaving.jpg" alt="Description of photo" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
+            <div class="gallery-caption">woobi leaving naa</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg6/airport.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">cootie baby❤️</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg6/baibai.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">when da wabi texted me to go to aisle 2 and i walked bacc fwom the cawpawk to aisle 2 to shee wabi heheheh</div>
+        </div>
+    </div>
+</section>
+
+<section id="thailand" class="memory-detail-page">
+    <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+    <h1>Thailand twip wid woobi's famiwy!!</h1>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="thailand/arrival.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">awwived in thailand!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/boat.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">fiwsh meal in thailand wid ur fav blood tofu yaaaaaackkk!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/temples.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">fiwsh sightseeing stop! temple of sanctuawyy </div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/temple.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">when we trailed off ourselves to take pictuwesh XD</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/pose.jpg" alt="Description of photo" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
+            <div class="gallery-caption">woobi posing heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/starbuck.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">starbucks!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/cawfee.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">woob woob dwinky bof our cawfeesh dafuak!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/ayskwem.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">ayskwem!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/ride.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">dwivey golf cawt!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/palace.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">one of my fav picsh of ush at da palace heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/buddha.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">posing wid buddha!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/lake.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">pictuwe by da lake!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/chish!.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">shay chish!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/chinatown.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">jerome town!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/cootie.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">wabi posing fow pictuwe heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="thailand/baibai.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">bai bai wan woobi 😢</div>
+        </div>
+    </div>
+</section>
+
+<section id="tswift" class="memory-detail-page">
+    <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+    <h1>Taylor swift week wid mama and ate g!</h1>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="tswift/awwival.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">woobi and mama awwival! flowersh packed by me heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/laze.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">westing at starbucksh becosh check in taym 2pm and tiwed!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/bejewlled.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">bejewlled wabi! </div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/fud.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">woobi posing beshide ouw dinnew spot</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/mbs.jpg" alt="Description of photo" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
+            <div class="gallery-caption">posing beside plant!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/wamen.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">I wemembew da wabi tweating me while ate g wash hunting fow hew tswift stuffiesh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/snacc.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">da wabi twying chinesh new yeaw snaccs when shweepovew heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/conc2.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">da woobi marking me wid heawt stickewsh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/water.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">my cootie wabi mwahhh!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/car.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">heheh my baby posing beshide porsche spowtscaw</div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/bai.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">❤️ </div>
+        </div>
+        <div class="gallery-item">
+            <img src="tswift/baibai.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">bai bai woobi! until next taym!!</div>
+        </div>
+    </div>
+</section>
+
+<section id="seventh" class="memory-detail-page">
+    <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+    <h1>woobi in sg post grad!!!</h1>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="sg7/1.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">picked up woobi wid a big bouquet!💐</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/2.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">wabi awwiving hawm to hew post gwad gift!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/3.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">my baby sho pwettyyy 💕 </div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/4.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">fiwsh meal in sg haiyaa jifannn!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/5.jpg" alt="Description of photo" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
+            <div class="gallery-caption">shniff shniff!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/6.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">da wabi hewping to cooky hew fav tofu!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/7.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">weady to myanch! wid wabi's fav soy bean dwinky heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/8.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">banmian wid mama!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/9.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">ovewnayt oatshhh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/10.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">i dyunno wat wabi wash doing HAHAH cootie la!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sg7/11.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">sho happy aftuw weaching plat laa!</div>
+        </div>
+    </div>
+</section>
+
+<section id="vietnam" class="memory-detail-page">
+    <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+    <h1>vietnam twip! (da weal grad gift)</h1>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="vietnam/1.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">otw to vietnam!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/3.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">my view!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/4.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">your view heheh </div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/5.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">awwived in hcmc!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/6.jpg" alt="Description of photo" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
+            <div class="gallery-caption">ouw comfy woom fow dish shtay!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/7.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">fiwsh vietnam meal of bun bo hue!🍜</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/8.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">da wabi and mama doing nailsh heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/9.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">fiwsh pho meal in vietnam!! 🍜</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/10.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">bookstweet!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/11.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">looky at my beautiful wabi heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/12.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">hungwy la!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/13.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">otw to saigon post office! </div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/14.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">woob woob wrote many post cawdsh fow famiwy!</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="vietnam/16.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">cootie wabi writing da postcawds</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/17.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">apawtment cafe!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/18.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">fiwsh taym haggling haul!!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/19.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">mama took foto of wabi teaching me haow shwim XD</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/20.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">banh mi enuf fow 3 pipol 🥖</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/21.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">poulet!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="vietnam/22.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">off to danang!!</div>
+        </div>
+        
+    </div>
+</section>
+
+<section id="danang" class="memory-detail-page">
+    <button class="btn back-btn" onclick="goBackToMemoryLane()">Back to Memories</button>
+    <h1>Danang and Hoi An 🇻🇳✈️🏮!</h1>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="danang/1.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">fiwsh meal in danang! wash soopew shmol compawed to hcmc </div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/0.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">me and my baby at my khe beach!</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="danang/3.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">Parasailing wid wabi!! I wash sho afwaid of letting go 🪂</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="danang/2.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">Shwim shwim!! my fiwsh taym being able to shwim on my bacc heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/2.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">Pho fow bwekky befowe we set out fow adventuwe! </div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/3.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">fiwsh stop at giant buddha!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/4.jpg" alt="Description of photo" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
+            <div class="gallery-caption">dawk ash fwak</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/11.jpg" alt="Description of photo" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
+            <div class="gallery-caption">❤️</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/5.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">da woobi covewing up becosh ish soopa hawt laa</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/6.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">my baby❤️</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/7.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">shelfee taym wid buddha!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/8.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">next stop ish da cave in marble mountain!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/9.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">my woob woob sho coot </div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/10.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">my tuwn!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/11 (2).jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">shteal my hat fow wat la!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/12.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">on da way to bana hills!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/13.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">awwived at sunwowld! ft. woob woob and mama</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/17.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">wiww nevew get tiwed of dish view</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="danang/14.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">cable caw taym!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/15.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">I wemembew being gwumpy becosh couldnt getsh good pic becosh sho cwowded</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/16.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">da view!!🏔</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/18.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">chish!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/19.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">woob with flowersh!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/20.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">posing wid kopi!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/22.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">da wabi and hew kopi</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/23.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">shelfee!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/21.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">weached da top!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/24.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">bacc down!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/25 (2).jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">otw to Hoi An!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/29.jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">bikini bottom buwgew!</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="danang/29.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">da egg wash too cooked XD</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/25 (3).jpg" alt="Description of photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <div class="gallery-caption">Sunset!!☀️</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/25.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">da woob woob at Hoi An nayt mawket</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/market.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption"></div> 
+        </div>
+        <div class="gallery-item">
+            <img src="danang/26.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">Shelfee!</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="danang/27.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">make a wish lantewn!</div>
+        </div>
+
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="danang/skem.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">HAHAHA we got skemmed laa!!! it wash jush sum sticky ash shiet</div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="danang/28.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">da woob woob posing fow boat wide!!</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="danang/wish.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">da wabi filming me and mama making a wish!</div>
+        </div>
+        <div class="gallery-item">
+            <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                <source src="danang/boat.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-caption">boat ride!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/boat.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">heheh my baby looks kool</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/mama.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">da two mosht impowtant women of my layf</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/31.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">korean fud da next day becosh bikini bottom wash nawwwt open and thewe wash nyo powew</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/32.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">wabi posing wid yewwow table and chaiwsh!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/33.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">bacc in HCMC! poulet again heheh</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/34.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">chican and mashed potata!!!!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="danang/35.jpg" alt="Description of photo" class="tall-image" style="width: 100%; border-radius: 10px;">
+            <div class="gallery-caption">wabi waiting fow me to take pic of dessewt sho can myanch XD</div>
+        </div>
+        
+    </div>
+</section>
+
+    
+    
+    <!-- Memory Lane (before proposal) -->
+    <section id="memory-lane" class="parallax">
+        <h1>Our Journey Together</h1>
+        <p>Before we go further, let's take a moment to remember some of our special moments...</p>
+        
+        <div class="memory-container">
+            <div class="memory-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">First Kiss</div>
+                <p>Our first kiss under the stars on that perfect summer night.</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('first-kiss'); playButtonSound();">Shee mawr photos</button>
+            </div>
+            
+            <div class="memory-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Special Date</div>
+                <p>That surprise anniversary dinner where everything went perfectly.</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('anniversary'); playButtonSound();">Shee mawr photos</button>
+            </div>
+            
+            <div class="memory-item">
+                <div class="photo-placeholder" onclick="enlargeImage(this)">Meaningful Moment</div>
+                <p>When you held my hand through that difficult time and made everything better.</p>
+                <button class="btn memory-btn" onclick="showMemoryDetail('support'); playButtonSound();">Shee mawr photos</button>
+            </div>
+        </div>
+        
+        <button class="btn btn-3d" onclick="showProposalSection(); playSpecialSound();">Continue Our Journey</button>
+    </section>
