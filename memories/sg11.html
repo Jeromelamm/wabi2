@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back in SG Again!</title>
+    <meta name="description" content="Another reunion in Singapore">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Back in SG Again</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Another Reunion</div>
+            <h1>Bacc in sg again!❤️</h1>
+            <p class="memory-subtitle">More beautiful moments together</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg11/1.jpg" alt="Picked up woob" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">picked up woob!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/2.jpg" alt="SG spaghetti" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sg spaghetti!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg11/3.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da woob hewpy cooky!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/3.jpg" alt="First time trying my steak" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob's fiwsh taym twying my shteak</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/4.jpg" alt="Steak" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shteakkkk!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/5.jpg" alt="First time trying ayam penyet" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob fwish taym twying my fav ayam penyet!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/6.jpg" alt="Woob and teh peng" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob and hew teh peng</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/6 (2).jpg" alt="Steak fix" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shteak fix fow woob!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/7.jpg" alt="Cutie" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">cootie!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/8.jpg" alt="Ramen" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wamen!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/9.jpg" alt="Shopping together" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and woob shapping</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/9(2).jpg" alt="Da woob" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da woob!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/10.jpg" alt="Vroom in Mercedes" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">vwoom vwoom in mewcedes!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg11/11.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">bai bai woob 😢</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/12.jpg" alt="No photography" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">nyo photogwaphy?! fuak dat!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg11/13.jpg" alt="Bye bye" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">bai bai wan</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="sg10.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="sg12.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="sg10.html" class="related-item">
+                    <img src="../images/sg10/1.jpg" alt="Previous visit" class="related-photo">
+                    <div class="related-caption">Previous SG Visit</div>
+                </a>
+                <a href="sg12.html" class="related-item">
+                    <img src="../images/sg12/1.jpg" alt="Closure visit" class="related-photo">
+                    <div class="related-caption">Closure Visit</div>
+                </a>
+                <a href="sg9.html" class="related-item">
+                    <img src="../images/sg9/1.jpg" alt="Earlier visit" class="related-photo">
+                    <div class="related-caption">Earlier SG Visit</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

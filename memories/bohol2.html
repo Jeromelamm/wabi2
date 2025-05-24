@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Bohol Trip!</title>
+    <meta name="description" content="My second time in Bohol - 2 weeks this time!">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Second Bohol Trip</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Second Bohol Trip</div>
+            <h1>My second taym in bohol!! 2 weeksh dish taym!!</h1>
+            <p class="memory-subtitle">Extended island paradise adventure</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/bohol2/arrival.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da wabi 1's awwival!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/hungwy.jpg" alt="Mango shake" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">heheh mango shake! we gotsh mago shake and leylam becosh i wash hungwy heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/bohol2/scawy.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">dat scawy fewwy ride that wabi and i were laffy laffy until wabi fwoze up XD cootie</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/woom.jpg" alt="Room chosen by wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woom dat wash chosen by wabi! (fuak u neil)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/chill.jpg" alt="Chilling at South Palms" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">chilling at south palms aftuw our meal laa</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/bohol2/chill3.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">swing swing!! weeeeeeee</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/bohol2/wabbit.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">me petting da bunniesh wid da leaf while wabi asky me pet it wid my handsh XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/bohol2/pony.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">wabi riding a pony!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/bohol2/swim.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">me in shwim showtsh and jersey wabi gave me, weady to shwim!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/s2shelfee.jpg" alt="Me and my baby" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and my baby ❤️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/bohol2/dance.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">when lola made me dance and i got embawassed 😭</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/inasal.jpg" alt="Greatest food on earth" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh taym discovering da greatest food on eawth 🍚🍗</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/chef.jpg" alt="Chef Jerome" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">chef jerome wid a belly</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/figa.jpg" alt="Best aglio olio" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">figawooo!! besht aglio olio ive hadsh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/figb.jpg" alt="Beautiful view while eating" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my beautiful view while eating figawoo</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/bohol2/manual.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">uhmmm cleawly manual washnt ash eashy ash i thoughtsh it wud be</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/coot.jpg" alt="Figaro with cute baby" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">figawo again wid my cootie baby❤️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/goodbye.jpg" alt="Kiss kiss" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">kish kish!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/bohol2/weave.jpg" alt="Bye for now" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">bai bai fow naow bohol! i'll be bacc!! 🥥🏝❤️ (mawr fow my wabi tho)</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="fifth-taym.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="sixth-taym.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="bohol.html" class="related-item">
+                    <img src="../images/bohol1/flight.jpg" alt="First Bohol trip" class="related-photo">
+                    <div class="related-caption">First Trip to Bohol</div>
+                </a>
+                <a href="sixth-taym.html" class="related-item">
+                    <img src="../images/sg6/pickup.jpg" alt="Sixth visit" class="related-photo">
+                    <div class="related-caption">Sixth Time in SG</div>
+                </a>
+                <a href="bohol3.html" class="related-item">
+                    <img src="../images/bohol3/1.jpg" alt="Third Bohol trip" class="related-photo">
+                    <div class="related-caption">Third Bohol Trip</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

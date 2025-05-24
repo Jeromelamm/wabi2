@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back in SG Before KL!</title>
+    <meta name="description" content="Back in Singapore before wabi went to KL with Hannah and Tita Anne">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Back in SG Before KL</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Before KL Trip</div>
+            <h1>Bacc in sg again! befowe u went to KL wid hannah and tita anne</h1>
+            <p class="memory-subtitle">Brief reunion before Malaysia trip</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg10/1.jpg" alt="Mandatory flower sniff" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">mandatowy flowew shniff when hawm!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/2.jpg" alt="Munch time" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">myanch myanch taym!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/3.jpg" alt="Fuak" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fuak.</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/4.jpg" alt="Video calling while in Malaysia" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">vid calling woob while woob in malaysia!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/5.jpg" alt="Woob does the sleep" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob doesh da shweep</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/6.jpg" alt="Wing wing" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wing wing!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/7.jpg" alt="Sleeping like a cutie" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">doeshing da shweep layk a fwacking cootie!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/8.jpg" alt="Pringles bouquet" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">pwinglesh bouquet to weceive wabi!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/9.jpg" alt="Tita Anne and Hannah spotted" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">tita anne and hannah spotted...</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/10.jpg" alt="Getting steak fix" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">getting woob hew shteak fix! aftuw daysh of nub malaysian fud</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/11.jpg" alt="Nyam nyam" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">nyam nyam!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/12.jpg" alt="Worst part of trip" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">ish taym fow da wowst pawt of da twip again</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/13.jpg" alt="Woob home" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob hawm!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/14.jpg" alt="Mama loves Thailand bag" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">mama wuvvs da thailand bag!! yay!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg10/15.jpg" alt="Meow" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">uhmmm meow!</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="bangkok.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="sg11.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="bangkok.html" class="related-item">
+                    <img src="../images/bangkok/1.jpg" alt="Bangkok trip" class="related-photo">
+                    <div class="related-caption">Bangkok Adventure</div>
+                </a>
+                <a href="sg11.html" class="related-item">
+                    <img src="../images/sg11/1.jpg" alt="Back in SG again" class="related-photo">
+                    <div class="related-caption">Back in SG Again</div>
+                </a>
+                <a href="sg9.html" class="related-item">
+                    <img src="../images/sg9/1.jpg" alt="Previous SG visit" class="related-photo">
+                    <div class="related-caption">Previous SG Visit</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaPa Adventure!</title>
+    <meta name="description" content="Da wabis venture on to SaPa - mountain adventure in Vietnam">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">SaPa Adventure</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">SaPa Trip</div>
+            <h1>Da wabis ventuwe on to SaPa!!🗻 🇻🇳</h1>
+            <p class="memory-subtitle">Mountain adventures and glass bridges!</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sapa/2.jpg" alt="Arriving at SaPa" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">awwiving at sapa!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/3.jpg" alt="Looking out window" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da woob looky out da window</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/4.jpg" alt="Mountain range" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Mountain range!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/5.jpg" alt="Nice view" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da view sho naysh la</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/6 (2).jpg" alt="Glass bridge" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">glass bwidge!! fuak.</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/6.jpg" alt="Scary as hell" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">twippy ash heww bosh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sapa/7.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">excoose my heavy bweathing!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/9.jpg" alt="Us vs glass bridge" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and woob vs glass bwidge!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/11.jpg" alt="Wabi relaxed" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi 2 seemsh to be welak! (mush be da cawfee)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/12.jpg" alt="I love you" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">heheh I wuvvv yooo!!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/29.jpg" alt="Sakura" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sakuwaaa</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/30.jpg" alt="In carriage" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and woob in cawwiage! hiya hiya! (nyo howsie showee)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/31.jpg" alt="Looking cute" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">heheh we looky coot</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/35.jpg" alt="Selfie time" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shelfee taym!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/37.jpg" alt="At Sunworld Fansipan" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and woob at sunworld fansipan!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sapa/40.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">going into da cloudsh!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/41.jpg" alt="Misty and cold" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sho mistyyyy and cooolddd</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/42.jpg" alt="I love you" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">i myanch u!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/43.jpg" alt="So cute" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sho fwacking coot!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/46.jpg" alt="At the peak" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and woob at da peak! (nawt weally peak yet but yesh)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/46.2.jpg" alt="I love you baby" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">I love you baby❤️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/51.jpg" alt="Coffee and croissant day" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da day we woke up eawly to haggle but ended up hashing cawfee and kwazon becosh nawt open yet wash my fav day tho!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/52.jpg" alt="Singapore Airlines" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob's fiwsh taym on Singapowe aiwlinesh!!! woob enjoyed da entertainment heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sapa/53.jpg" alt="On the way home" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">otw hawm!</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="hanoi.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="sg14.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="hanoi.html" class="related-item">
+                    <img src="../images/hanoi/0.jpg" alt="Hanoi trip" class="related-photo">
+                    <div class="related-caption">Hanoi Adventure</div>
+                </a>
+                <a href="sg14.html" class="related-item">
+                    <img src="../images/sg14/1.jpg" alt="Back home" class="related-photo">
+                    <div class="related-caption">Back Home</div>
+                </a>
+                <a href="vietnam.html" class="related-item">
+                    <img src="../images/vietnam/1.jpg" alt="Vietnam trip" class="related-photo">
+                    <div class="related-caption">Vietnam Trip</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

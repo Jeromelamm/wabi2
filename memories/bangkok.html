@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangkok Adventure!</title>
+    <meta name="description" content="Bangkok trip with woobi">
+
+    <!-- Add base tag to force absolute paths from root -->
+    <base href="/">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Bangkok Adventure</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Bangkok Trip</div>
+            <h1>Bangkok!</h1>
+            <p class="memory-subtitle">Thailand capital adventures</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/bangkok/1.jpg" alt="Bangkok 7-11 snacks" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">bangkok 7-11 snacciesh!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/2.jpg" alt="Cute wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my cootie wabi</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/3.jpg" alt="Wabi 2 resting" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi 2 resting up</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/4.jpg" alt="Secret selfie" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shekwet shelfee wid wabi 2 while being deathly sicc!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/5.jpg" alt="Discovered and posed" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob discovewed me and hit a pose!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/6.jpg" alt="Cute wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">cootie wabi!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/7.jpg" alt="Rather lay on floor" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob wud rather lay on floow than shaower aftuw coming hawm!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/8.jpg" alt="Sneaked selfie while sleeping" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">heheh sneaked a shelfee while woob shlept</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/9.jpg" alt="Woob awake" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob wakey!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/10.jpg" alt="Posing with Mercedes" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob posing wid mercedes!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/11.jpg" alt="Never get tired of this view" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wiww nevew get tiwed of dish view</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/12.jpg" alt="Gentle woman bags flex" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob wanted to flex da gentle woman bagsh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                    <source src="images/bangkok/13.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da infinite video taking!! at lish my awm looked biggg</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/14.jpg" alt="Getting tax refund" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">getting dat tax wefund!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/bangkok/15.jpg" alt="Mandatory sniff sniff" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob and hew mandatowy shniff shniff wan</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="sg9.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="sg10.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="krabi.html" class="related-item">
+                    <img src="images/krabi/1.jpg" alt="Krabi trip" class="related-photo">
+                    <div class="related-caption">Krabi Adventure</div>
+                </a>
+                <a href="thailand.html" class="related-item">
+                    <img src="images/thailand/arrival.jpg" alt="Thailand with family" class="related-photo">
+                    <div class="related-caption">Thailand with Family</div>
+                </a>
+                <a href="sg10.html" class="related-item">
+                    <img src="images/sg10/1.jpg" alt="Back in SG" class="related-photo">
+                    <div class="related-caption">Back in SG Again</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="js/music-player.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

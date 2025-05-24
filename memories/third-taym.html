@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wabi's Third Visit!</title>
+    <meta name="description" content="My baby's third time in Singapore">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Wabi's Third Visit</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Third Visit</div>
+            <h1>My baby's thiwd taym in sg!!</h1>
+            <p class="memory-subtitle">My baby looksh sho cooooooot!!!</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg3/pwata.jpg" alt="Mushroom cheese pasta" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Woobi's requested meal aftuw lasht taym! mushwoom chish pwata om nyom nyom 🍽</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/mawinabay.jpg" alt="Marina Bay adventure" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da wabis set out to MBS for adventuwe!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/gondola.jpg" alt="Free gondola tickets" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Gotsh fwee gondola tix fwom wandom pipol! hehehe</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/uhmidk.jpg" alt="Post-grab picture" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Post-gwab pictuwe (we eawned $5 in an houw XD)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/saizeriyaa.jpg" alt="Post-grab meal" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Post-gwab meal!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/dessewt.jpg" alt="Dessert from chateraise" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">dessewt fwom chateraise nyehehehe</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/dunkinmochi.jpg" alt="Dunkin mochi donut" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi myanching dunkin mochi donut and falling in love wid it heheh coot!!!!!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/sushi!!!.jpg" alt="First sushi belt experience" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Woobi's fiwsh sushi belt expewience! 🍣</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/tiongbahru!.jpg" alt="Tiong Bahru Bakery" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">our fiwsh tiong bahru bakery experience togethew! (i may hash ovew ordewed heheh sowee)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/ducknoodlesh.jpg" alt="Duck noodles" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi's fiwsh taym twying duck noodle! 🦤</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/annoyed.jpg" alt="Annoyed at photo taking" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi annoyed at my foto taking skillsh XD (post botanic gawdens!!)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/goldenhouw.jpg" alt="Golden hour bus ride" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">headingsh hawm by bus! golden houwwww ☀️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/weavingagain.jpg" alt="Last picture together" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">lasht pic of ush fow dish visit 😭 bai bai</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg3/children.jpg" alt="With JJ and MJ" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi bacc hawm, naow wid two of our childwen!! JJ and MJ!!</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="second-taym.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="bohol.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="second-taym.html" class="related-item">
+                    <img src="../images/sg2/coolwabi.jpg" alt="Second visit" class="related-photo">
+                    <div class="related-caption">Woob's Second Visit</div>
+                </a>
+                <a href="bohol.html" class="related-item">
+                    <img src="../images/bohol1/flight.jpg" alt="First Bohol trip" class="related-photo">
+                    <div class="related-caption">First Trip to Bohol</div>
+                </a>
+                <a href="fourth-taym.html" class="related-item">
+                    <img src="../images/sg4/remake.jpg" alt="Fourth visit" class="related-photo">
+                    <div class="related-caption">Fourth Time in SG</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

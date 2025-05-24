@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danang and Hoi An!</title>
+    <meta name="description" content="Exploring Danang and Hoi An - more Vietnam adventures">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Danang and Hoi An</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Danang & Hoi An</div>
+            <h1>Danang and Hoi An!!</h1>
+            <p class="memory-subtitle">Beach, Buddha, and beautiful adventures</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/danang/0 (2).jpg" alt="On the way to Danang" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">otw to danang!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/1.jpg" alt="First meal in Danang" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh meal in danang!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/0.jpg" alt="My Khe Beach" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and woob at my khe beach!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/1 (2).jpg" alt="Boat tour" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">boat touw awound danang!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/2 (2).jpg" alt="Off to see Buddha" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">off to shee da buddha!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/5.jpg" alt="Arrived at Buddha" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">awwived at da buddha!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/5 (2).jpg" alt="Cute baby" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my cootie baby❤️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/3.jpg" alt="Holding hands" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">mama tooky pic of ush holding handsh!! heheh ❤️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/7.jpg" alt="Selfie in front of Buddha" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and woob hashing shelfee in fwont of buddha!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/12 (2).jpg" alt="Marble Mountain" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">next destination, marble mountain!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/8.jpg" alt="Selfie in cave" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shelfee in cave!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/danang/9.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da woob woob climbing up fow foto spot!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/danang/3.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">parasailing wid woob woob!!! i wash sho scawed to let go laa!! XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/danang/2.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">my fiwsh taym shwimming aftuw getting da besht advice "welak!"</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/11 (3).jpg" alt="Pizza 4Ps dinner" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Pizza 4Ps fow dinnew!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/danang/11.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">flip flip flip da pizzaaa</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/12.jpg" alt="To Sun World Bana Hills" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">otw to sun world bana hills!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/15.jpg" alt="Golden Bridge" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">weached da bwidge! (i wash annoyed becosh pipol kept walking in fwont of ush haiyaaa)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/19.jpg" alt="Biggest flower" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">spot da biggest flowew! (my woobi) meanwhile mama:🧍‍♀️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/21.jpg" alt="French town" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">weached da fwench town!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/25 (2).jpg" alt="Hoi An" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Hoi An!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/26.jpg" alt="Selfie in Hoi An" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shelfee!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/danang/27.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da woob making a wish!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/28.jpg" alt="Boat ride" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">boat ride!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/mama.jpg" alt="Two important women" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da two most important women of my life❤️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/woob.jpg" alt="Cute baby" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my cootie baby</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/coot.jpg" alt="Cutie pie" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">cootiepie!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/otw.jpg" alt="To the airport" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">otw to da aiwpowt!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/danang/bacc.jpg" alt="Bye bye Danang" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">bai bai danang! till next taym!</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="vietnam.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="sg8.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="vietnam.html" class="related-item">
+                    <img src="../images/vietnam/1.jpg" alt="Vietnam trip" class="related-photo">
+                    <div class="related-caption">Vietnam Trip</div>
+                </a>
+                <a href="sg8.html" class="related-item">
+                    <img src="../images/sg8/1.jpg" alt="Back in SG" class="related-photo">
+                    <div class="related-caption">Back in SG</div>
+                </a>
+                <a href="hanoi.html" class="related-item">
+                    <img src="../images/hanoi/0.jpg" alt="Hanoi trip" class="related-photo">
+                    <div class="related-caption">Hanoi Adventure</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

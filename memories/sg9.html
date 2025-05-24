@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back in SG Again!</title>
+    <meta name="description" content="Back in Singapore after Krabi - more adventures">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Back in SG Again</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Back in SG</div>
+            <h1>Bacc in sg!</h1>
+            <p class="memory-subtitle">Home again after Krabi adventures</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg9/1.jpg" alt="Sniff flower first" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">bacc in sg! fiwsh owdew of business... shniff flowew!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/2.jpg" alt="Woob chilling" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da woob woob cheelin!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/3.jpg" alt="Wabi got dengue" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi 1 gotsh dengue 🤒</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/4.jpg" alt="Secret selfie while deathly sick" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shekwet shelfee wid wabi 2 while being deathly sicc!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/5.jpg" alt="Discovered and hit pose" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob discovewed me and hit a pose!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/6.jpg" alt="Cutie wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">cootie wabi!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/7.jpg" alt="Rather lay on floor than shower" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob wud rather lay on floow than shaower aftuw coming hawm!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/9.jpg" alt="Sneaked selfie while sleeping" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">heheh sneaked a shelfee while woob shlept</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/10.jpg" alt="Woob awake" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob wakey!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/11.jpg" alt="Posing with Mercedes" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob posing wid mercedes!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg9/12.jpg" alt="Never get tired of this view" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wiww nevew get tiwed of dish view</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="krabi.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="bangkok.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="krabi.html" class="related-item">
+                    <img src="../images/krabi/1.jpg" alt="Krabi adventure" class="related-photo">
+                    <div class="related-caption">Krabi Adventure</div>
+                </a>
+                <a href="bangkok.html" class="related-item">
+                    <img src="../images/bangkok/1.jpg" alt="Bangkok trip" class="related-photo">
+                    <div class="related-caption">Bangkok Adventure</div>
+                </a>
+                <a href="sg8.html" class="related-item">
+                    <img src="../images/sg8/1.jpg" alt="Back in SG after Vietnam" class="related-photo">
+                    <div class="related-caption">Back in SG After Vietnam</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

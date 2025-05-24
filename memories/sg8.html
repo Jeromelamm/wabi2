@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back in SG After Vietnam!</title>
+    <meta name="description" content="Back home in Singapore after our Vietnam adventure">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Back in SG After Vietnam</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Back in SG</div>
+            <h1>Bacc in sg!</h1>
+            <p class="memory-subtitle">Home sweet home after Vietnam</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg8/1.jpg" alt="Homecooked fried chicken wings" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Bacc in sg aftuw vietnam! taym fow sum homecooked fwied chican wingsh!🍗</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg8/2.jpg" alt="Best mashed potatoes" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da wabi made da besht mashed potatoesh I hash evew eaten! yum yum in my tum tum🥔</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg8/4.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">woob woob made cookiesh subway styleee!🍪</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg8/6.jpg" alt="Filing complaint about no poop stool" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob filing a complain thru insta about hashing nyo poopi stool heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg8/5.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">wash twyna catch woob woob red handed but inshtead woob woob caught me wecowding</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="danang.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="krabi.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="danang.html" class="related-item">
+                    <img src="../images/danang/0.jpg" alt="Danang trip" class="related-photo">
+                    <div class="related-caption">Danang and Hoi An</div>
+                </a>
+                <a href="krabi.html" class="related-item">
+                    <img src="../images/krabi/1.jpg" alt="Krabi trip" class="related-photo">
+                    <div class="related-caption">Krabi Adventure</div>
+                </a>
+                <a href="vietnam.html" class="related-item">
+                    <img src="../images/vietnam/1.jpg" alt="Vietnam trip" class="related-photo">
+                    <div class="related-caption">Vietnam Trip</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

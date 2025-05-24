@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanoi Adventure!</title>
+    <meta name="description" content="Da wabis finally in Hanoi - Vietnam adventure continues">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Hanoi Adventure</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Hanoi Trip</div>
+            <h1>Da wabis finawwy in Hanoi!! 🇻🇳</h1>
+            <p class="memory-subtitle">Our amazing Vietnam adventure continues</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/hanoi/0.jpg" alt="Arrived in Hanoi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi 1 awwived in hanoi! 🇻🇳</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/2 (2).jpg" alt="Pizza 4Ps" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Pizza 4Ps! it wash mid tho</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/2.jpg" alt="Food preparation" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">taym to spit in pipol's fud</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/3.jpg" alt="Us at Pizza 4Ps" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and da woob at Pizza 4Ps!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/4.jpg" alt="Famous building" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da famous building i alwaysh shee online</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/4 (3).jpg" alt="Buying bread" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">buying bwead fow da day!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/4 (2).jpg" alt="In the bus" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">in da bush wid woobi!! otw to Ha Long bayyyy</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/6 (2).jpg" alt="Ha Long Bay" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">halong bay!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/6.jpg" alt="Speedboat" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da zoom zoom speedboat!! we looky sho happy</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/5.jpg" alt="Your smile" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">your smile is wowth evewithing na</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/6.2.jpg" alt="Reverse titanic" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">reverse titanic!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/7.jpg" alt="Dipping legs in water" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da woob dipping hew legsh in watew!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/7 (4).jpg" alt="Beautiful baby" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my beautiful baby❤️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/7 (2).jpg" alt="Cutie" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">cootiee!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/17.jpg" alt="Train track" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and da woob on da twain twack!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/18.jpg" alt="So cute" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shoo coooottt!!! I MYANCH U!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/hanoi/19.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">choo choo!! wash kind underwhelming XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/22 (2).jpg" alt="Staring into coffee" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da wabi stawing into da kopi's soul</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/32.jpg" alt="Lotte World Sky Deck" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">lotte world sky deck!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/36.jpg" alt="Us together" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and da woob!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/37.jpg" alt="I love you" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">I love you wan wabi</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/hanoi/42.jpg" alt="Sleeper bus to Sapa" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">our sleepew bus fow sapa!</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="sg13.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="sapa.html" class="btn memory-nav-btn">Continue to SaPa →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="sg13.html" class="related-item">
+                    <img src="../images/sg13/1.jpg" alt="Reunited" class="related-photo">
+                    <div class="related-caption">Da Wabis Reunite</div>
+                </a>
+                <a href="sapa.html" class="related-item">
+                    <img src="../images/sapa/2.jpg" alt="SaPa adventure" class="related-photo">
+                    <div class="related-caption">SaPa Adventure</div>
+                </a>
+                <a href="sg14.html" class="related-item">
+                    <img src="../images/sg14/1.jpg" alt="Back home" class="related-photo">
+                    <div class="related-caption">Back Home</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

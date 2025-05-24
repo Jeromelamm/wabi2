@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Nido Adventure!</title>
+    <meta name="description" content="Island hopping and beautiful beaches in El Nido, Palawan">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">El Nido Adventure</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">El Nido Trip</div>
+            <h1>El Nido Adventure!</h1>
+            <p class="memory-subtitle">Island paradise with my love</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/el-nido/1.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">wabi 1 awwived in cebu!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/2.jpg" alt="Mang Inasal" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">mang inasal!!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/4.jpg" alt="Puerto Princesa" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">awwived at puerto princesa!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/6.jpg" alt="Before bus ride" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shelfee befowe da towtuwe bus ride</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/7.jpg" alt="Beautiful view" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">looky at da view thoo!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/9.jpg" alt="So pretty" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sho pwetty laa</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/el-nido/10.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">woom touw aftuw checkin in!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/12.jpg" alt="El Nido beach" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">el nido beachh, i pwefew alona!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/20.jpg" alt="Amazing view" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">look at dish view laa!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/el-nido/29.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">waoawwww cleaw watewsh and wid wabi? cant beat that la</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/31.jpg" alt="Cute wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">heheh my cootie wabi</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/33.jpg" alt="Tour guide photo" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">touw guide tooky a pic fow ush!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/35.jpg" alt="Secret lagoon" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shekwet lagoon</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/40.jpg" alt="Me and woob" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and woob!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/41.jpg" alt="I love you" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">I wuv yoo</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/el-nido/42.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">fiwsh taym ushing finsh XD (I hadsh nyo idea haow to usesh heheh)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/78.jpg" alt="Nacpan beach" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">nacpan beach!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/80.jpg" alt="Woobi and coconut" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi and coconut!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/81.jpg" alt="Coconut as big as head" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">coconut ash big ash wabi's head la</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/85.jpg" alt="Say cheese" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shay chish woob woob!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/86.jpg" alt="My silhouette" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my tuwn! silhouette of me!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/87.jpg" alt="Woob's silhouette" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da woob woob's silhouette</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/89.jpg" alt="Sunset" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sunset!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/el-nido/92.jpg" alt="Best inasal" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">inasal!! one of the besht ive eaten (pwobably bettew than mang inasal becosh hash soop and nawt dat oily)</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="sg12.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="bohol3.html" class="btn memory-nav-btn">Continue to Bohol →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="sg12.html" class="related-item">
+                    <img src="../images/sg12/1.jpg" alt="SG closure visit" class="related-photo">
+                    <div class="related-caption">Closure Visit</div>
+                </a>
+                <a href="bohol3.html" class="related-item">
+                    <img src="../images/bohol3/1.jpg" alt="Third Bohol trip" class="related-photo">
+                    <div class="related-caption">Third Bohol Trip</div>
+                </a>
+                <a href="bohol.html" class="related-item">
+                    <img src="../images/bohol1/flight.jpg" alt="First Bohol trip" class="related-photo">
+                    <div class="related-caption">First Trip to Bohol</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

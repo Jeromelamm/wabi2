@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Graduation Visit!</title>
+    <meta name="description" content="Woobi in Singapore post graduation">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Post Graduation Visit</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Seventh Visit</div>
+            <h1>woobi in sg post grad!!!</h1>
+            <p class="memory-subtitle">Celebrating graduation together</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg7/1.jpg" alt="Big bouquet pickup" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">picked up woobi wid a big bouquet!💐</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/2.jpg" alt="Post grad gift" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi awwiving hawm to hew post gwad gift!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/3.jpg" alt="So pretty baby" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my baby sho pwettyyy 💕</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/4.jpg" alt="First meal jifan" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh meal in sg haiyaa jifannn!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/5.jpg" alt="Sniff sniff" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shniff shniff!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/6.jpg" alt="Helping to cook tofu" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da wabi hewping to cooky hew fav tofu!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/7.jpg" alt="Ready to eat with soy bean drink" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">weady to myanch! wid wabi's fav soy bean dwinky heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/8.jpg" alt="Ban mian with mama" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">banmian wid mama!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/9.jpg" alt="Overnight oats" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">ovewnayt oatshhh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/10.jpg" alt="Don't know what wabi doing" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">i dyunno wat wabi wash doing HAHAH cootie la!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg7/11.jpg" alt="Happy after reaching platinum" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sho happy aftuw weaching plat laa!</div>
+            </div>
+        </div>
+
+        <!-- Call to action for Vietnam -->
+        <div class="special-section-container">
+            <p class="memory-subtitle">Weady fow HCMC?!</p>
+            <a href="vietnam.html" class="btn glow-button">lesh go HCMC!</a>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="tswift.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="vietnam.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="tswift.html" class="related-item">
+                    <img src="../images/tswift/awwival.jpg" alt="Taylor Swift week" class="related-photo">
+                    <div class="related-caption">Taylor Swift Week</div>
+                </a>
+                <a href="vietnam.html" class="related-item">
+                    <img src="../images/vietnam/1.jpg" alt="Vietnam trip" class="related-photo">
+                    <div class="related-caption">Vietnam Trip</div>
+                </a>
+                <a href="sixth-taym.html" class="related-item">
+                    <img src="../images/sg6/pickup.jpg" alt="Sixth visit" class="related-photo">
+                    <div class="related-caption">Sixth Time in SG</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

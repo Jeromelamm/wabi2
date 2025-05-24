@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Visit</title>
+    <meta name="description" content="Da woob woob coming over to SG for my requested closure">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Closure Visit</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Closure Visit</div>
+            <h1>Da woob woob coming ovew to sg fow my requested closuwe, thank you wan ❤️</h1>
+            <p class="memory-subtitle">Two precious weeks together</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg12/1.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">hawwo woobi!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/2.jpg" alt="IKEA for dinner" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">ikea fow dinnew!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg12/2.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">woob woob getting da ikea ayskwemm</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/3.jpg" alt="Woob doing the sleep" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob doing da shweep</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg12/6.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da woob woob climbing dish!!! i wash laffy laffy until it wash my tuwn XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg12/7.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">ayskwem twuck!!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg12/12.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">I wemembew my woobi being sho happy evewitaym we had uncle ayskwem heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/13.jpg" alt="Sleeping so well" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob shweeping sho weww la!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/14.jpg" alt="Wabi sense grabbing bolster" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi sense went off dat i nawt in bed anymawr! sho gwabby da bolstew!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/16.jpg" alt="Im Kim samgyup" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">i'm kim's sammgyuuuppp!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/24.jpg" alt="Durian by the beach" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">duwian by da beach!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg12/24.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">I love you</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/25.jpg" alt="Woob kiss kiss" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob kish kish?</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/26.jpg" alt="Kiss" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">kish!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/28.jpg" alt="Christmas wonderland" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">chwishmash wondew land at gawdens by da bay</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/29.jpg" alt="Woob with kopi peng" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob wid kopi pengggg!!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/30.jpg" alt="Kangaroo mama with little wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi layk kangawoo mama wid litol wabi while pwaying royal match</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/31.jpg" alt="Sniff sniff" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shniff shniff!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg12/32.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">cootie</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/33.jpg" alt="Torigo" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">torigo!! i wemembew getting hangwy heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/34.jpg" alt="Trying out bag" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi twying out a bag she likey heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/38.jpg" alt="Sunset on my birthday" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sunset on my bday na</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg12/41.jpg" alt="Mama and sunset" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">mama and da sunset</div>
+            </div>
+        </div>
+
+        <!-- Special message -->
+        <div class="special-section-container">
+            <p class="memory-subtitle">Thank you for giving me these two weeks my love.</p>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="sg11.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="el-nido.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="sg11.html" class="related-item">
+                    <img src="../images/sg11/1.jpg" alt="Previous visit" class="related-photo">
+                    <div class="related-caption">Previous SG Visit</div>
+                </a>
+                <a href="el-nido.html" class="related-item">
+                    <img src="../images/el-nido/31.jpg" alt="El Nido trip" class="related-photo">
+                    <div class="related-caption">El Nido Adventure</div>
+                </a>
+                <a href="sg14.html" class="related-item">
+                    <img src="../images/sg14/1.jpg" alt="Final memories" class="related-photo">
+                    <div class="related-caption">Final Memories</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

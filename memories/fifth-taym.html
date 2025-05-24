@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wabi's Fifth Visit!</title>
+    <meta name="description" content="Wabi's fifth time in Singapore - heheh showee wann">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Wabi's Fifth Visit</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Fifth Visit</div>
+            <h1>wabi's fifth taym in sg! heheh showee wann</h1>
+            <p class="memory-subtitle">More beautiful adventures together</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg5/firstride.jpg" alt="First ride after license" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Wabi's first ride after i got my license!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/mama.jpg" alt="Pic with mama" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">pic with mama at bedok!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/sgspag.jpg" alt="SG spaghetti" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi's requested fiwsh meal in sg, sg spaghetti!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/chican.jpg" alt="Expensive chicken rice" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">expensiv chican waysh XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/chicanwaysh.jpg" alt="Downstairs chicken rice" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">hadsh chican waysh at downstaiwsh next day and da wabi pweferred dish</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/banmian.jpg" alt="First ban mian" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi twying banmian fow fiwsh taym laa</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/newton.jpg" alt="Newton with family" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da wabi and famiwy at newton!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/msgprawn.jpg" alt="MSG prawn" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">msg pwawn heh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/kaya.jpg" alt="Kaya toast argument" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">when i picked wabi up posht gym fow kaya toastiesh and we argued about cappuccino</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/homecook.jpg" alt="Homecooked chicken cutlet" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi's fiwsh twy of my fav homecooked chican cutlet!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/signoodle.jpg" alt="Signature noodles" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">signatuwe noodlesh specially pwepared with wuv by me heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/evil.jpg" alt="Evil wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">evil wabi😣</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/ayskwem.jpg" alt="I love you more" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">I ❤️ U mawrrr!!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/car.jpg" alt="Test driving" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi test dwiving laaa!! maybe gonna buy nissan? 🤐</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/litol.jpg" alt="Little wabi and Rarry" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">looky!! litol wabi and rawry!! heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg5/goat.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">da wabi's goat fawm excursion!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg5/coconut.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">wan of my fav vidsh of wabi of all taym wan!!! HAHAHA ❤️❤️</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg5/hawm.jpg" alt="Going home" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi hawm and ded fwom twavelsh heheh tenksh fow coming to shee me!!</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="fourth-taym.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="bohol2.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="fourth-taym.html" class="related-item">
+                    <img src="../images/sg4/remake.jpg" alt="Fourth visit" class="related-photo">
+                    <div class="related-caption">Fourth Time in SG</div>
+                </a>
+                <a href="bohol2.html" class="related-item">
+                    <img src="../images/bohol2/arrival.jpg" alt="Second Bohol trip" class="related-photo">
+                    <div class="related-caption">Second Bohol Trip</div>
+                </a>
+                <a href="sixth-taym.html" class="related-item">
+                    <img src="../images/sg6/pickup.jpg" alt="Sixth visit" class="related-photo">
+                    <div class="related-caption">Sixth Time in SG</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krabi Adventure!</title>
+    <meta name="description" content="Island hopping and adventures in Krabi, Thailand">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Krabi Adventure</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Krabi Trip</div>
+            <h1>Krabi!! 🐠🇹🇭</h1>
+            <p class="memory-subtitle">Thailand island adventures</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/krabi/1.jpg" alt="Arrived in Krabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Awwived in kwabi!!🇹🇭</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/2.jpg" alt="Limestone mountains" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">looky at all da limestone mountainshh 🏔</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/3.jpg" alt="Ao Nang beach" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Ao nang beach!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/5.jpg" alt="Phi Phi island tours" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Setting out to phi phi island tours!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/8.jpg" alt="Maya Bay" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">awwived at maya bay! but wabi wash shy to takey pic becosh of crowd</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/9.jpg" alt="Made wabi pose" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">made da wabi pose fow wan!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/10.jpg" alt="Turquoise water" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">tuwquoise watew!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/12.jpg" alt="Maya bay" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">maya bay!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/krabi/15.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">meoww! (they can indeed hear you)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/krabi/14.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">showcasing da view</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/17.jpg" alt="Phi Phi island" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">phi phi island!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/krabi/18.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">coconut ayskweemm!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/24.jpg" alt="Crew photo" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">gotsh da crew to takey pic fow ush</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/30.jpg" alt="Mochi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">mooooochiiiiiii nyam nyam</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/krabi/35.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">monki hashin potato chipsh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/38.jpg" alt="Asked to smile" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">asked da woob woob to smile fow me and u did!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/40.jpg" alt="Favorite pic of us" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wan of my fav picsh of ush</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/krabi/43.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">me and woob woob jumping in togethew!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/45.jpg" alt="I" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">I</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/47.jpg" alt="love" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">love</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/46.jpg" alt="you" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">you</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/52.jpg" alt="Me and da woob" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">me and da woob</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/54.jpg" alt="Love" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wuvv!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/67.jpg" alt="Mochi powder everywhere" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob eating mochi and getting da powdew evewiwhew SHOOO COOOOT</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/krabi/69.jpg" alt="Heading back to SG" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">heading bacc to sg naa</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="sg8.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="sg9.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="sg8.html" class="related-item">
+                    <img src="../images/sg8/1.jpg" alt="Back in SG" class="related-photo">
+                    <div class="related-caption">Back in SG</div>
+                </a>
+                <a href="thailand.html" class="related-item">
+                    <img src="../images/thailand/arrival.jpg" alt="Thailand with family" class="related-photo">
+                    <div class="related-caption">Thailand with Family</div>
+                </a>
+                <a href="sg9.html" class="related-item">
+                    <img src="../images/sg9/1.jpg" alt="Back in SG again" class="related-photo">
+                    <div class="related-caption">Back in SG Again</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

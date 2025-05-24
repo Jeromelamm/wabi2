@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our First Time Meeting!</title>
+    <meta name="description" content="Woobi's first time in Singapore - our first meeting in real life">
+    
+    <!-- Add base tag to force absolute paths from root -->
+    <base href="/">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Our First Meeting</span>
+    </nav>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">May 2022</div>
+            <h1>Our First Time Meeting!</h1>
+            <p class="memory-subtitle">Woobi's first time in sg ❤️</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/sg1/shelfee.png" alt="First selfie together" class="photo">
+                <div class="gallery-caption">One of our first proper pic together!! (i was so nervous still)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/sg1/shelfee1.jpg" alt="At Miniso" class="photo">
+                <div class="gallery-caption">When woobi wanted to look at miniso XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/sg1/wabi-hide.jpg" alt="Hiding behind me" class="photo">
+                <div class="gallery-caption">Da cootie woobi hiding behind me during picture!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/sg1/botak.jpg" alt="Botak selfie" class="photo">
+                <div class="gallery-caption">Botak selfie haiya (but i bet you like it 😠)</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/sg1/wamen.jpg" alt="Airport ramen" class="photo">
+                <div class="gallery-caption">When I was hungry at airport but everything was closed so da wabi insisted for us to eat ramen heheh</div>
+            </div>
+            
+            <div class="gallery-item video-item">
+                <div class="gallery-image">
+                    <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                        <source src="images/sg1/wifey.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-caption">da wabi calling me wifey rawr!</div>
+            </div>
+            
+            <div class="gallery-item video-item">
+                <div class="gallery-image">
+                    <video class="romantic-video" controls poster="images/video-thumbnail.jpg">
+                        <source src="images/sg1/necklace.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-caption">Putting on necklaces for wabi!!😌</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="initial.html" class="btn memory-nav-btn">← Back to All Memories</a>
+            <a href="memories/second-taym.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="memories/second-taym.html" class="related-item">
+                    <img src="images/sg2/coolwabi.jpg" alt="Second visit" class="related-photo">
+                    <div class="related-caption">Woob's Second Visit</div>
+                </a>
+                <a href="memories/third-taym.html" class="related-item">
+                    <img src="images/sg3/goldenhouw.jpg" alt="Third visit" class="related-photo">
+                    <div class="related-caption">Third Time in SG</div>
+                </a>
+                <a href="memories/bohol.html" class="related-item">
+                    <img src="images/bohol1/flight.jpg" alt="First Bohol trip" class="related-photo">
+                    <div class="related-caption">First Trip to Bohol</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/music-player.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

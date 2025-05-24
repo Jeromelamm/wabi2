@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Wabis Reunite!</title>
+    <meta name="description" content="The wabis reunite before Hanoi adventure">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Da Wabis Reunite</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Reunion</div>
+            <h1>Da wabis reunite!</h1>
+            <p class="memory-subtitle">Together again before our Hanoi adventure</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg13/1.jpg" alt="Bought and wrapped flowers" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">boughtsh and wrapped flowewsh fow wabi myshelf!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/2.jpg" alt="Excited to present" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">I ish excited to pwesent to da wabi!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/3.jpg" alt="Woob received but sick" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob weceived! but wash sicc 🤧</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/4.jpg" alt="First meal is satay" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh meal ishhhhh SATAY!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg13/1.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">pokemon competition!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg13/2.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">woob woob getting fwustwateeeedddd</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/5.jpg" alt="Food coma" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">gotsh instant fud coma aftuw XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/6.jpg" alt="Space suit" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">space suittt!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/7.jpg" alt="So happy" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">sho happy la HAHAHAHA</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/8.jpg" alt="Cutie" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">cootie!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/9.jpg" alt="Mandatory flower sniff" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">mandatowy flowew shniff yesh yesh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/10.jpg" alt="Torigo" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">towigo!!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/11.jpg" alt="Munch munch" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">myanch myanch myanch</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/15.jpg" alt="Yong tau foo" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">yong tau foo fow wabi becosh woob woob wanted sumfing soopy!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/16.jpg" alt="Claypot rice" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">claypot waysh!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg13/18.jpg" alt="Sleeping soundly" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my baby shweeping so soundly (wid da whole bed 😡)</div>
+            </div>
+        </div>
+
+        <!-- Call to action for Hanoi -->
+        <div class="special-section-container">
+            <p class="memory-subtitle">Weady fow Hanoi?</p>
+            <a href="hanoi.html" class="btn glow-button">Take us to Hanoi my love!</a>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="bohol3.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="hanoi.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="bohol3.html" class="related-item">
+                    <img src="../images/bohol3/1.jpg" alt="Third Bohol trip" class="related-photo">
+                    <div class="related-caption">Third Bohol Trip</div>
+                </a>
+                <a href="hanoi.html" class="related-item">
+                    <img src="../images/hanoi/0.jpg" alt="Hanoi adventure" class="related-photo">
+                    <div class="related-caption">Hanoi Adventure</div>
+                </a>
+                <a href="sapa.html" class="related-item">
+                    <img src="../images/sapa/2.jpg" alt="SaPa adventure" class="related-photo">
+                    <div class="related-caption">SaPa Adventure</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

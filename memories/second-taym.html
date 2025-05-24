@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wabi's Second Visit!</title>
+    <meta name="description" content="Wabi's first solo trip to sg - our second meeting">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Wabi's Second Visit</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Second Visit</div>
+            <h1>Wabi's fiwsh solo trip to sg</h1>
+            <p class="memory-subtitle">Woobi's 2nd time in sg!!</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/sg2/fitchack.jpg" alt="Fit check" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fit chack fow when i picked wabi up fow wabi's 2nd time in sg 👀</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg2/jinjja.jpg" alt="Jinjja chicken" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Ordered in Jinjja chican becosh we wash too lazy to go out!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg2/jinjja2.jpg" alt="Cute wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">My cootie wabi heheh</div>
+            </div>
+
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg2/cootie.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">me and my woobi!</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/sg2/marina.jpg" alt="Marina Bay" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi at marina bay! ft. my expert level foto taking skillsh at dat taym XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg2/shelfee1.jpg" alt="Selfie time" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Shelfee taym!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/sg2/shelfee2.jpg" alt="Cute wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Looky haow coot my wabi ish</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/sg2/shelfee3.jpg" alt="Kiss" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">Mwah!</div>
+            </div>
+
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/sg2/awm-wrestle.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">arm wrestling wid da wabi befowe our fud came XD</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/sg2/jj.jpg" alt="JJ toy" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi's fiwsh shweep bacc at cottage wid vewy fiwsh soft toy gift heheh our fiwsh child JJ!</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="first-taym.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="third-taym.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="first-taym.html" class="related-item">
+                    <img src="../images/sg1/shelfee.png" alt="First visit" class="related-photo">
+                    <div class="related-caption">Our First Meeting</div>
+                </a>
+                <a href="third-taym.html" class="related-item">
+                    <img src="../images/sg3/goldenhouw.jpg" alt="Third visit" class="related-photo">
+                    <div class="related-caption">Third Time in SG</div>
+                </a>
+                <a href="bohol.html" class="related-item">
+                    <img src="../images/bohol1/flight.jpg" alt="First Bohol trip" class="related-photo">
+                    <div class="related-caption">First Trip to Bohol</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

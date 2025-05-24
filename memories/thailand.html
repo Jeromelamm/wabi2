@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thailand Trip with Family!</title>
+    <meta name="description" content="Thailand trip with woobi's family">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Thailand Trip with Family</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Thailand Trip</div>
+            <h1>Thailand twip wid woobi's famiwy!!</h1>
+            <p class="memory-subtitle">Adventures in Thailand together</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/thailand/arrival.jpg" alt="Arrived in Thailand" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">awwived in thailand!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/boat.jpg" alt="First meal with blood tofu" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh meal in thailand wid ur fav blood tofu yaaaaaackkk!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/temples.jpg" alt="Temple of sanctuary" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh sightseeing stop! temple of sanctuawyy</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/temple.jpg" alt="Taking pictures alone" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">when we trailed off ourselves to take pictuwesh XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/pose.jpg" alt="Woobi posing" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woobi posing heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/starbuck.jpg" alt="Starbucks" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">starbucks!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/cawfee.jpg" alt="Drinking both coffees" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob dwinky bof our cawfeesh dafuak!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/ayskwem.jpg" alt="Ice cream" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">ayskwem!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/ride.jpg" alt="Golf cart driving" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">dwivey golf cawt!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/palace.jpg" alt="At the palace" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">one of my fav picsh of ush at da palace heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/buddha.jpg" alt="Posing with Buddha" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">posing wid buddha!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/lake.jpg" alt="Picture by the lake" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">pictuwe by da lake!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/chish!.jpg" alt="Say cheese" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">shay chish!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/chinatown.jpg" alt="Jerome town" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">jerome town!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/cootie.jpg" alt="Wabi posing for picture" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">wabi posing fow pictuwe heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/thailand/baibai.jpg" alt="Bye bye wan woobi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">bai bai wan woobi 😢</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="sixth-taym.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="tswift.html" class="btn memory-nav-btn">Next Memory →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="sixth-taym.html" class="related-item">
+                    <img src="../images/sg6/pickup.jpg" alt="Sixth visit" class="related-photo">
+                    <div class="related-caption">Sixth Time in SG</div>
+                </a>
+                <a href="tswift.html" class="related-item">
+                    <img src="../images/tswift/awwival.jpg" alt="Taylor Swift week" class="related-photo">
+                    <div class="related-caption">Taylor Swift Week</div>
+                </a>
+                <a href="krabi.html" class="related-item">
+                    <img src="../images/krabi/1.jpg" alt="Krabi trip" class="related-photo">
+                    <div class="related-caption">Krabi Adventure</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Trip!</title>
+    <meta name="description" content="Da weal gwad gift begins - Vietnam trip with wabi">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memory-detail.css">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="../index.html">🏠 Home</a>
+        <span class="separator">></span>
+        <a href="../initial.html">📖 All Memories</a>
+        <span class="separator">></span>
+        <span class="current">Vietnam Trip</span>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="../audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Image modal -->
+    <div class="modal" id="image-modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Memory Detail Page -->
+    <main class="memory-detail">
+        <div class="memory-header">
+            <div class="memory-date">Vietnam Trip</div>
+            <h1>vietnam twip!</h1>
+            <p class="memory-subtitle">da weal gwad gift begins!</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/vietnam/1.jpg" alt="On the way to Vietnam" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">otw to vietnam!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/3.jpg" alt="My view" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">my view!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/4.jpg" alt="Your view" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">your view heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/5.jpg" alt="Arrived in HCMC" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">awwived in hcmc!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/6.jpg" alt="Our comfy room" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">ouw comfy woom fow dish shtay!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/7.jpg" alt="First Vietnam meal" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh vietnam meal of bun bo hue!🍜</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/8.jpg" alt="Nails with mama" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">da wabi and mama doing nailsh heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/9.jpg" alt="First pho meal" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh pho meal in vietnam!! 🍜</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/10.jpg" alt="Book street" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">bookstweet!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/11.jpg" alt="Beautiful wabi" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">looky at my beautiful wabi heheh</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/12.jpg" alt="Hungry" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">hungwy la!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/13.jpg" alt="To Saigon Post Office" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">otw to saigon post office!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/14.jpg" alt="Writing postcards" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">woob woob wrote many post cawdsh fow famiwy!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <video class="romantic-video" controls poster="../images/video-thumbnail.jpg">
+                    <source src="../images/vietnam/16.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption">cootie wabi writing da postcawds</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/17.jpg" alt="Apartment cafe" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">apawtment cafe!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/18.jpg" alt="First haggling haul" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">fiwsh taym haggling haul!!!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/19.jpg" alt="Swimming lesson" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">mama took foto of wabi teaching me haow shwim XD</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/20.jpg" alt="Banh mi for three" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">banh mi enuf fow 3 pipol 🥖</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/21.jpg" alt="Poulet" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">poulet!</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="../images/vietnam/22.jpg" alt="Off to Danang" class="photo" onclick="enlargeImage(this)">
+                <div class="gallery-caption">off to danang!!</div>
+            </div>
+        </div>
+
+        <!-- Memory Navigation -->
+        <div class="memory-navigation">
+            <a href="seventh.html" class="btn memory-nav-btn">← Previous Memory</a>
+            <a href="../initial.html" class="btn memory-nav-btn">Back to All Memories</a>
+            <a href="danang.html" class="btn memory-nav-btn">Continue to Danang →</a>
+        </div>
+
+        <!-- Related Memories -->
+        <div class="related-memories">
+            <h3>Related Memories</h3>
+            <div class="related-grid">
+                <a href="seventh.html" class="related-item">
+                    <img src="../images/sg7/1.jpg" alt="Post grad visit" class="related-photo">
+                    <div class="related-caption">Post Graduation SG</div>
+                </a>
+                <a href="danang.html" class="related-item">
+                    <img src="../images/danang/0.jpg" alt="Danang trip" class="related-photo">
+                    <div class="related-caption">Danang and Hoi An</div>
+                </a>
+                <a href="sg8.html" class="related-item">
+                    <img src="../images/sg8/1.jpg" alt="Back in SG" class="related-photo">
+                    <div class="related-caption">Back in SG</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/memory-detail.js"></script>
+    <script src="../js/music-player.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>
