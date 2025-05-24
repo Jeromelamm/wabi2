@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey Together</title>
+    <meta name="description" content="All our precious memories in one place">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/memories.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link">🏠 Home</a>
+        <a href="years.html" class="nav-link">📅 Browse by Year</a>
+        <a href="final.html" class="nav-link">❤️ Special Letter</a>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Initial Memory Lane -->
+    <main class="memories-section">
+        <h1>Our Journey Together So Far!</h1>
+        <p class="second-caption">Before anything else, let's take a stroll down the memory lane the wabis have had together!</p>
+        
+        <div class="memory-container">
+            <div class="memory-item">
+                <div class="date-bubble">May 2022</div>
+                <img src="images/sg1/first-taym.jpg" alt="First Date" class="photo">
+                <p class="initial-caption">Woobi's first time in sg! (also our first time meeting irl!) 👩‍❤️‍💋‍👨</p>
+                <a href="memories/first-taym.html" class="btn memory-btn">See more photos</a>
+            </div>
+           
+            <div class="memory-item">
+                <div class="date-bubble">August 2022</div>
+                <img src="images/sg2/coolwabi.jpg" alt="Second Visit" class="photo">
+                <p class="initial-caption">Woob's second time in sg! ❤️</p>
+                <a href="memories/second-taym.html" class="btn memory-btn">See More Photos</a>
+            </div>
+           
+            <div class="memory-item">
+                <div class="date-bubble">Nov/Dec 2022</div>
+                <img src="images/sg3/goldenhouw.jpg" alt="Third Visit" class="photo">
+                <p class="initial-caption">Wabi's third time in sg heheh (thanks for always coming to see me) ❤️❤️</p>
+                <a href="memories/third-taym.html" class="btn memory-btn">See More Photos</a>
+            </div>
+           
+            <div class="memory-item">
+                <div class="date-bubble">March 2023</div>
+                <img src="images/bohol1/flight.jpg" alt="First Bohol Trip" class="photo">
+                <p class="initial-caption">First time flying over to see wabi!! (first time ever flying actually)❤️✈️ </p>
+                <a href="memories/bohol.html" class="btn memory-btn">See More Photos</a>
+            </div>
+           
+            <div class="memory-item">
+                <div class="date-bubble">May 2023</div>
+                <img src="images/sg4/feed.jpg" alt="Fourth Visit" class="photo">
+                <p class="initial-caption">Woobi in sg again!! hehehe</p>
+                <a href="memories/fourth-taym.html" class="btn memory-btn">See More Photos</a>
+            </div>
+           
+            <div class="memory-item">
+                <div class="date-bubble">July/Aug 2023</div>
+                <img src="images/sg5/pickup.jpg" alt="Fifth Visit" class="photo">
+                <p class="initial-caption">my wabi visits me again!❤️ </p>
+                <a href="memories/fifth-taym.html" class="btn memory-btn">See more photos</a>
+            </div>
+    
+            <div class="memory-item">
+                <div class="date-bubble">October 2023</div>
+                <img src="images/bohol2/cover.jpg" alt="Second Bohol Trip" class="photo">
+                <p class="initial-caption">Wabi 1 coming back to Bohol!🥥✈️❤️🏝 </p>
+                <a href="memories/bohol2.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">January 2024</div>
+                <img src="images/sg6/wamen.jpg" alt="Sixth Visit" class="photo">
+                <p class="initial-caption">My loverrrrrr visiting me again!!! </p>
+                <a href="memories/sixth-taym.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">February 2024</div>
+                <img src="images/thailand/cover.jpg" alt="Thailand" class="photo">
+                <p class="initial-caption">Thailand trip with woobi's family! 🇹🇭 </p>
+                <a href="memories/thailand.html" class="btn memory-btn">See more photos</a>
+            </div>
+    
+            <div class="memory-item">
+                <div class="date-bubble">March 2024</div>
+                <img src="images/tswift/conc1.jpg" alt="TSwift" class="photo">
+                <p class="initial-caption">Taylor swift week!! </p>
+                <a href="memories/tswift.html" class="btn memory-btn">See more photos</a>
+            </div>
+    
+            <div class="memory-item">
+                <div class="date-bubble">June 2024</div>
+                <img src="images/sg7/2.jpg" alt="Seventh Visit" class="photo">
+                <p class="initial-caption">Wabi's post grad trip!</p>
+                <a href="memories/seventh.html" class="btn memory-btn">See more photos</a>
+            </div>
+    
+            <div class="memory-item">
+                <div class="date-bubble">June 2024</div>
+                <img src="images/vietnam/2.jpg" alt="Vietnam" class="photo">
+                <p class="initial-caption">HCMC trip! 🇻🇳 </p>
+                <a href="memories/vietnam.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">June 2024</div>
+                <img src="images/danang/0.jpg" alt="Danang" class="photo">
+                <p class="initial-caption">Danang and Hoi An! ✈️🏮 </p>
+                <a href="memories/danang.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">June 2024</div>
+                <img src="images/sg8/3.jpg" alt="Back in SG" class="photo">
+                <p class="initial-caption">Back in sg! (not for long) </p>
+                <a href="memories/sg8.html" class="btn memory-btn">See more photos</a>
+            </div>
+            
+            <div class="memory-item">
+                <div class="date-bubble">July 2024</div>
+                <img src="images/krabi/0.jpg" alt="Krabi" class="photo">
+                <p class="initial-caption">Da wabis venture on to Krabi!🪸🏔🏝🐠🇹🇭 </p>
+                <a href="memories/krabi.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">August 2024</div>
+                <img src="images/sg9/9.jpg" alt="Back home" class="photo">
+                <p class="initial-caption">back home after Krabi! </p>
+                <a href="memories/sg9.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">August 2024</div>
+                <img src="images/bangkok/9.jpg" alt="Bangkok" class="photo">
+                <p class="initial-caption">Bangkok 🇹🇭 </p>
+                <a href="memories/bangkok.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">August 2024</div>
+                <img src="images/sg10/8.jpg" alt="Return from KL" class="photo">
+                <p class="initial-caption">woobi returns from KL!! </p>
+                <a href="memories/sg10.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">October 2024</div>
+                <img src="images/sg11/9.jpg" alt="Visit" class="photo">
+                <p class="initial-caption">Da woob visits me! ❤️ </p>
+                <a href="memories/sg11.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">December 2024</div>
+                <img src="images/sg12/31.jpg" alt="Birthday" class="photo">
+                <p class="initial-caption">My birthday with you</p>
+                <a href="memories/sg12.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">January 2025</div>
+                <img src="images/el-nido/5.jpg" alt="El Nido" class="photo">
+                <p class="initial-caption">Wabi 1 comes over to ph again! 🇵🇭</p>
+                <a href="memories/el-nido.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">January 2025</div>
+                <img src="images/bohol3/24.jpg" alt="Bohol 3" class="photo">
+                <p class="initial-caption">wabis head back to bohol!</p>
+                <a href="memories/bohol3.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">March 2025</div>
+                <img src="images/sg13/1.jpg" alt="Reunion" class="photo">
+                <p class="initial-caption">Reunited!</p>
+                <a href="memories/sg13.html" class="btn memory-btn">See more photos</a>
+            </div>
+
+            <div class="memory-item">
+                <div class="date-bubble">March 2025</div>
+                <img src="images/hanoi/1.jpg" alt="Hanoi" class="photo">
+                <p class="initial-caption">da wabis venture to Hanoi!!! ✈️🇻🇳</p>
+                <a href="memories/hanoi.html" class="btn memory-btn">See more photos</a>
+            </div>
+            
+            <div class="memory-item">
+                <div class="date-bubble">March 2025</div>
+                <img src="images/sapa/1.jpg" alt="Sapa" class="photo">
+                <p class="initial-caption">Sapa with da woob woob heheh 🇻🇳🗻</p>
+                <a href="memories/sapa.html" class="btn memory-btn">See more photos</a>
+            </div>
+            
+            <div class="memory-item">
+                <div class="date-bubble">April 2025</div>
+                <img src="images/sg14/1.jpg" alt="Latest" class="photo">
+                <p class="initial-caption">I love you so much babi</p>
+                <a href="memories/sg14.html" class="btn memory-btn">See more photos</a>
+            </div>
+        </div>    
+        
+        <p class="second-caption">Thank you my love, for everything. I'll forever cherish our memories.❤️</p> 
+        
+        <!-- Link to special section -->
+        <a href="final.html" class="btn glow-button">Something from the bottom of my heart</a>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/memories.js"></script>
+    <script src="js/music-player.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="../js/image-enlarger.js"></script>
+</body>
+</html>

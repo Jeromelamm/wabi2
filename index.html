@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Special Person - Welcome</title>
+    <meta name="description" content="A special journey through our memories together">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+    <!-- Custom cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Loading screen -->
+    <div class="loading-screen">
+        <div class="loading-heart">❤️</div>
+        <p class="loading-text">Loading our memories...</p>
+    </div>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Navigation helper -->
+    <div class="navigation-helper">
+        <div class="nav-hint">❤️ click on the heart to begin! ❤️</div>
+    </div>
+    
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+    
+    <!-- Landing Page -->
+    <main class="landing-section">
+        <h1 class="typing-text">The Places Your Love Touched, Through My Eyes.</h1>
+        <p class="typing-text">Hawwo my love,</p>
+        <p>I made this for us, a quiet place to remember. ❤️</p>
+        
+        <div class="heart" id="landing-heart" onclick="heartClickEffect(event)">❤️</div>
+        
+        <div class="love-meter">
+            <div class="love-fill" id="love-fill"></div>
+            <div class="love-percentage" id="love-percentage">0%</div>
+        </div>
+        
+        <div class="navigation-options">
+            <a href="initial.html" class="btn btn-3d">Browse All Memowies</a>
+            <a href="years.html" class="btn btn-3d">Browse by Yeaw</a>
+            <a href="final.html" class="btn glow-button">Something from the bottom of my heart ❤️</a>
+        </div>
+    </main>
+
+    <!-- Music Player (will be loaded dynamically) -->
+    <div id="music-player-container"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/landing.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/music-player.js"></script>
+</body>
+</html>

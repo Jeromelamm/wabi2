@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey Through the Years</title>
+    <meta name="description" content="Explore our memories year by year">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link">🏠 Home</a>
+        <a href="initial.html" class="nav-link">📖 All Memories</a>
+        <a href="final.html" class="nav-link">❤️ Special Letter</a>
+    </nav>
+
+    <!-- Audio control -->
+    <div class="audio-control" onclick="toggleAudio()">
+        <div class="audio-heart">❤️</div>
+        <div class="audio-tooltip">Play Our Song</div>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="background-music" loop>
+        <source src="audio/Ruth B. - Dandelions (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floating-hearts-container"></div>
+
+    <!-- Year Selection Page -->
+    <main class="years-section">
+        <h1>Our Journey Through The Years</h1>
+        <p>Explore our special memories year by year!</p>
+        
+        <div class="year-collages">
+            <!-- 2022 Year Collage -->
+            <div class="year-collage" onclick="showYear('2022')">
+                <div class="year-title">2022</div>
+                <div class="collage-container">
+                    <img src="images/sg1/first-taym.jpg" alt="2022 Memory" class="collage-img collage-img-1">
+                    <img src="images/sg2/coolwabi.jpg" alt="2022 Memory" class="collage-img collage-img-2">
+                    <img src="images/sg3/goldenhouw.jpg" alt="2022 Memory" class="collage-img collage-img-3">
+                </div>
+                <div class="year-caption">When it all began! ❤️</div>
+            </div>
+            
+            <!-- 2023 Year Collage -->
+            <div class="year-collage" onclick="showYear('2023')">
+                <div class="year-title">2023</div>
+                <div class="collage-container">
+                    <img src="images/bohol1/flight.jpg" alt="2023 Memory" class="collage-img collage-img-1">
+                    <img src="images/sg4/feed.jpg" alt="2023 Memory" class="collage-img collage-img-2">
+                    <img src="images/sg5/pickup.jpg" alt="2023 Memory" class="collage-img collage-img-3">
+                    <img src="images/bohol2/cover.jpg" alt="2023 Memory" class="collage-img collage-img-4">
+                    <img src="images/bohol2/bunni.jpg" alt="2023 Memory" class="collage-img collage-img-5">
+                </div>
+                <div class="year-caption">A year of adventures together! ✈️</div>
+            </div>
+            
+            <!-- 2024 Year Collage -->
+            <div class="year-collage" onclick="showYear('2024')">
+                <div class="year-title">2024</div>
+                <div class="collage-container">
+                    <img src="images/krabi/0.jpg" alt="2024 Memory" class="collage-img collage-img-1">
+                    <img src="images/thailand/cover.jpg" alt="2024 Memory" class="collage-img collage-img-2">
+                    <img src="images/tswift/awwival.jpg" alt="2024 Memory" class="collage-img collage-img-3">
+                    <img src="images/sg7/0.jpg" alt="2024 Memory" class="collage-img collage-img-4">
+                    <img src="images/vietnam/2.jpg" alt="2024 Memory" class="collage-img collage-img-5">
+                    <img src="images/danang/0.jpg" alt="2024 Memory" class="collage-img collage-img-6">
+                </div>
+                <div class="year-caption">Making new memories!</div>
+            </div>
+
+            <!-- 2025 Year Collage -->
+            <div class="year-collage" onclick="showYear('2025')">
+                <div class="year-title">2025</div>
+                <div class="collage-container">
+                    <img src="images/el-nido/5.jpg" alt="2025 Memory" class="collage-img collage-img-1">
+                    <img src="images/bohol3/24.jpg" alt="2025 Memory" class="collage-img collage-img-2">
+                    <img src="images/sg13/1.jpg" alt="2025 Memory" class="collage-img collage-img-3">
+                    <img src="images/hanoi/1.jpg" alt="2025 Memory" class="collage-img collage-img-4">
+                    <img src="images/sapa/1.jpg" alt="2025 Memory" class="collage-img collage-img-5">
+                    <img src="images/sg14/1.jpg" alt="2025 Memory" class="collage-img collage-img-6">
+                </div>
+                <div class="year-caption">New year new memories!!</div>
+            </div>
+        </div>
+
+        <!-- Year-specific sections (hidden by default) -->
+        <div id="year-2022" class="year-memories hidden">
+            <h2>Our 2022 Memories ❤️</h2>
+            <p>This was when our journey began!</p>
+            
+            <div class="memory-container">
+                <div class="memory-item">
+                    <div class="date-bubble">May 2022</div>
+                    <img src="images/sg1/first-taym.jpg" alt="First Meeting" class="photo">
+                    <p class="initial-caption">Woobi's first time in sg! (also our first time meeting irl!) 👩‍❤️‍💋‍👨</p>
+                    <a href="memories/first-taym.html" class="btn memory-btn">See more photos</a>
+                </div>
+                
+                <div class="memory-item">
+                    <div class="date-bubble">August 2022</div>
+                    <img src="images/sg2/coolwabi.jpg" alt="Second Visit" class="photo">
+                    <p class="initial-caption">Woob's second time in sg! ❤️</p>
+                    <a href="memories/second-taym.html" class="btn memory-btn">See More Photos</a>
+                </div>
+                
+                <div class="memory-item">
+                    <div class="date-bubble">Nov/Dec 2022</div>
+                    <img src="images/sg3/goldenhouw.jpg" alt="Third Visit" class="photo">
+                    <p class="initial-caption">Wabi's third time in sg heheh (thanks for always coming to see me) ❤️❤️</p>
+                    <a href="memories/third-taym.html" class="btn memory-btn">See More Photos</a>
+                </div>
+            </div>
+            
+            <button class="btn back-years-btn" onclick="hideYear()">Back to Years</button>
+        </div>
+
+        <!-- Similar sections for 2023, 2024, 2025 would be here -->
+        
+        <p class="second-caption">Thank you my love, for everything. I'll forever cherish our memories, I hope we'll be able to make more..someday maybe.❤️</p>
+    </main>
+
+    <!-- Music Player -->
+    <div id="music-player-container"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/years.js"></script>
+    <script src="js/music-player.js"></script>
+</body>
+</html>
