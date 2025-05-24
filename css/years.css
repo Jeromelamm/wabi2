@@ -1,0 +1,357 @@
+/* Years Page Specific Styles */
+
+.years-section {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.years-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: colorShift 3s infinite alternate;
+}
+
+/* Year collages grid */
+.year-collages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin: 3rem 0;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.year-collage {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.year-collage:nth-child(1) { animation-delay: 0.2s; }
+.year-collage:nth-child(2) { animation-delay: 0.4s; }
+.year-collage:nth-child(3) { animation-delay: 0.6s; }
+.year-collage:nth-child(4) { animation-delay: 0.8s; }
+
+.year-collage:hover {
+    transform: translateY(-15px) rotateY(5deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.year-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), #ff8a8a);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 1.5rem 0;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Comic Neue', cursive;
+}
+
+.collage-container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    padding-top: 5rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.collage-img {
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease;
+    border: 3px solid white;
+}
+
+.collage-img-1 {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%) rotate(-8deg);
+    z-index: 5;
+}
+
+.collage-img-2 {
+    top: 35%;
+    left: 50%;
+    transform: translate(-65%, 0%) rotate(5deg);
+    z-index: 4;
+}
+
+.collage-img-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, 20%) rotate(-5deg);
+    z-index: 3;
+}
+
+.collage-img-4 {
+    top: 25%;
+    left: 50%;
+    transform: translate(-85%, 10%) rotate(12deg);
+    z-index: 2;
+    width: 160px;
+    height: 110px;
+}
+
+.collage-img-5 {
+    top: 45%;
+    left: 50%;
+    transform: translate(-15%, 25%) rotate(-12deg);
+    z-index: 2;
+    width: 160px;
+    height: 110px;
+}
+
+.collage-img-6 {
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, 10%) rotate(8deg);
+    z-index: 1;
+    width: 140px;
+    height: 100px;
+}
+
+.year-collage:hover .collage-img-1 {
+    transform: translate(-50%, -25%) rotate(-12deg) scale(1.05);
+}
+
+.year-collage:hover .collage-img-2 {
+    transform: translate(-70%, 5%) rotate(8deg) scale(1.05);
+}
+
+.year-collage:hover .collage-img-3 {
+    transform: translate(-30%, 25%) rotate(-8deg) scale(1.05);
+}
+
+.year-collage:hover .collage-img-4 {
+    transform: translate(-90%, 15%) rotate(15deg) scale(1.05);
+}
+
+.year-collage:hover .collage-img-5 {
+    transform: translate(-10%, 30%) rotate(-15deg) scale(1.05);
+}
+
+.year-collage:hover .collage-img-6 {
+    transform: translate(-50%, 15%) rotate(12deg) scale(1.05);
+}
+
+.year-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--secondary), #6ae8e0);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Comic Neue', cursive;
+}
+
+/* Year memory sections */
+.year-memories {
+    min-height: 100vh;
+    display: none;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.year-memories.active {
+    display: flex;
+}
+
+.year-memories h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    font-family: 'Comic Neue', cursive;
+}
+
+.year-memories .memory-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin: 2rem 0;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.year-memories .memory-item {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.year-memories .memory-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.year-memories .memory-item:nth-child(1) { animation-delay: 0.1s; }
+.year-memories .memory-item:nth-child(2) { animation-delay: 0.3s; }
+.year-memories .memory-item:nth-child(3) { animation-delay: 0.5s; }
+.year-memories .memory-item:nth-child(4) { animation-delay: 0.7s; }
+
+.back-years-btn {
+    background: linear-gradient(135deg, var(--dark), #495057);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-years-btn:hover {
+    background: linear-gradient(135deg, #495057, var(--dark));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide/show year sections */
+.hidden {
+    display: none !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorShift {
+    0% { 
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    50% { 
+        background: linear-gradient(135deg, var(--secondary), #f9d423);
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    100% { 
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .years-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .year-collages {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .year-collage {
+        height: 350px;
+    }
+    
+    .year-title {
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+    
+    .collage-img {
+        width: 160px;
+        height: 110px;
+    }
+    
+    .collage-img-4,
+    .collage-img-5 {
+        width: 120px;
+        height: 80px;
+    }
+    
+    .collage-img-6 {
+        width: 100px;
+        height: 70px;
+    }
+    
+    .year-memories .memory-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .year-memories h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .years-section {
+        padding: 1rem;
+    }
+    
+    .years-section h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .year-collage {
+        height: 300px;
+    }
+    
+    .year-title {
+        font-size: 1.8rem;
+    }
+    
+    .collage-img {
+        width: 140px;
+        height: 100px;
+    }
+    
+    .year-caption {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}

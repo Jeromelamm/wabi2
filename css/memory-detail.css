@@ -1,0 +1,648 @@
+/* Updated Gallery item container adjustments for videos */
+.gallery-item.video-item {
+    width: 600px;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 600px;
+}
+
+.gallery-item.video-item .gallery-image {
+    width: 600px;
+    height: auto; /* Let height be determined by video aspect ratio */
+    background-color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Override the gallery video styling to maintain aspect ratio */
+.gallery .gallery-item.video-item {
+    width: auto !important; /* Let width be determined by video */
+    max-width: 600px !important;
+    margin-bottom: 2rem !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    flex: 0 0 auto !important; /* Don't force fixed width */
+}
+
+.gallery .gallery-item.video-item .gallery-image {
+    width: auto !important; /* Auto width to fit video */
+    max-width: 600px !important;
+    height: auto !important; /* Auto height to maintain aspect ratio */
+    background-color: #000 !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+/* The key fix - make videos maintain their aspect ratio */
+.gallery .gallery-item.video-item .romantic-video {
+    width: 100% !important;
+    height: auto !important; /* Auto height maintains aspect ratio */
+    max-width: 600px !important;
+    border-radius: 15px !important;
+    box-shadow: none !important; /* Container has the shadow */
+    margin: 0 !important;
+    display: block !important;
+    transition: all 0.3s ease !important;
+    object-fit: contain !important; /* Show full video content */
+}
+
+.gallery .gallery-item.video-item .romantic-video:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2) !important;
+}
+
+/* Modal video fixes - show full video without cropping */
+.modal .modal-content.romantic-video,
+.modal video.romantic-video,
+.modal .romantic-video {
+    object-fit: contain !important; /* Always contain, never crop */
+    width: auto !important;
+    height: auto !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    border-radius: 10px !important;
+    background-color: #000 !important;
+    box-shadow: 0 0 50px rgba(255,255,255,0.3) !important;
+}
+
+/* Override any existing modal video styling */
+.modal .modal-content[src*=".mp4"],
+.modal .modal-content[src*=".webm"],
+.modal .modal-content[src*=".mov"],
+.modal .modal-content[src*=".avi"] {
+    object-fit: contain !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    margin: 0 !important;
+    border-radius: 10px !important;
+    background-color: #000 !important;
+}
+
+/* General video styling override in style.css */
+.romantic-video {
+    width: 100% !important;
+    max-width: 600px !important;
+    height: auto !important; /* Changed from fixed height */
+    border-radius: 16px !important;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2) !important;
+    margin: 0 !important; /* Remove auto margins that cause issues */
+    display: block !important;
+    transition: all 0.3s ease !important;
+    object-fit: contain !important; /* Always contain for videos */
+}
+
+/* Individual Memory Detail Page Styles */
+
+.memory-detail {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Memory header section */
+.memory-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+.memory-date {
+    background: linear-gradient(135deg, var(--secondary), #6ae8e0);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.3);
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.memory-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Comic Neue', cursive;
+    line-height: 1.2;
+}
+
+.memory-subtitle {
+    font-size: 1.3rem;
+    color: var(--dark);
+    font-family: 'Comic Neue', cursive;
+    margin-bottom: 1rem;
+}
+
+/* Gallery grid for memory photos - HORIZONTAL FLEX LAYOUT */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem; /* Increased gap for larger images */
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 1400px; /* Increased max-width for 600px images */
+}
+
+.gallery-item {
+    width: 600px;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 600px; /* Fixed width, no grow/shrink */
+}
+
+.gallery-item:hover {
+    transform: scale(1.03) translateY(-5px);
+    z-index: 1;
+}
+
+.gallery-image {
+    width: 600px;
+    height: 400px;
+    background-color: #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Enhanced gallery caption styling for horizontal layout */
+.gallery-caption {
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.1rem;
+    color: var(--dark);
+    text-align: center;
+    padding: 1.2rem 1.5rem;
+    margin: 0 0.5rem;
+    background: linear-gradient(135deg, #ffeef1, #fff9f9);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.2);
+    max-width: 580px; /* Adjusted for 600px images */
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    line-height: 1.4;
+}
+
+.gallery-caption:before {
+    content: '💖';
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.gallery-caption:after {
+    content: '❤️';
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.gallery-item:hover .gallery-caption {
+    background: linear-gradient(135deg, #ffebf0, #ffeef1);
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+/* Staggered animation for gallery items */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
+.gallery-item:nth-child(7) { animation-delay: 0.7s; }
+.gallery-item:nth-child(8) { animation-delay: 0.8s; }
+.gallery-item:nth-child(9) { animation-delay: 0.9s; }
+.gallery-item:nth-child(10) { animation-delay: 1.0s; }
+
+/* Continue staggering but cap at reasonable delay */
+.gallery-item:nth-child(n+11) { animation-delay: 1.0s; }
+
+/* Photo and video styling */
+.photo {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.photo:hover {
+    transform: scale(1.02);
+}
+
+/* Video styling - maintain aspect ratio - IMPORTANT: This overrides style.css */
+.romantic-video {
+    width: 100% !important;
+    max-width: 600px !important;
+    height: auto !important; /* Force auto height to maintain aspect ratio */
+    border-radius: 16px !important;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2) !important;
+    margin: 20px auto !important;
+    display: block !important;
+    transition: all 0.3s ease !important;
+    object-fit: contain !important; /* Ensure video maintains its aspect ratio */
+}
+
+.romantic-video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+
+/* Tall image styling for portrait photos */
+.tall-image {
+    height: 600px !important;
+    object-fit: cover;
+}
+
+/* Memory navigation between memories */
+.memory-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.memory-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2rem;
+    background: white;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.2);
+}
+
+.memory-nav-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+/* Related memories section */
+.related-memories {
+    margin: 4rem 0;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.related-memories h3 {
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    font-family: 'Comic Neue', cursive;
+    text-align: center;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.related-item {
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.related-item:nth-child(1) { animation-delay: 0.2s; }
+.related-item:nth-child(2) { animation-delay: 0.4s; }
+.related-item:nth-child(3) { animation-delay: 0.6s; }
+
+.related-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.related-photo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.related-item:hover .related-photo {
+    transform: scale(1.05);
+}
+
+.related-caption {
+    padding: 1.2rem;
+    color: var(--primary);
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #ffeef1, #fff);
+}
+
+/* Image modal enhancements */
+/* Image modal enhancements */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(255,255,255,0.3);
+    animation: zoomIn 0.3s ease-out;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+/* Video modal fixes for memory detail pages */
+.modal .modal-content[src*=".mp4"],
+.modal .modal-content[src*=".webm"],
+.modal .modal-content[src*=".mov"],
+.modal .modal-content[src*=".avi"],
+.modal video,
+.modal .romantic-video {
+    object-fit: contain !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    margin: 0 !important;
+    border-radius: 15px !important;
+    background-color: #000 !important;
+    box-shadow: 0 0 50px rgba(255,255,255,0.3) !important;
+}
+
+/* Special styling for video modals */
+.modal-content.video-modal {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    background-color: #000;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2001;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+    background: rgba(255,107,107,0.8);
+}
+
+/* Back button styling */
+.back-btn {
+    background: linear-gradient(135deg, var(--dark), #495057);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #495057, var(--dark));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile responsiveness for horizontal layout */
+@media (max-width: 768px) {
+    .memory-detail {
+        padding: 1rem;
+    }
+    
+    .memory-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .memory-date {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.5rem;
+    }
+    
+    .gallery {
+        gap: 1.5rem;
+        flex-direction: column; /* Stack vertically on mobile */
+        align-items: center;
+    }
+    
+    .gallery-item {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .gallery-image,
+    .photo,
+    .romantic-video {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .tall-image {
+        height: 300px !important;
+    }
+    
+    .gallery-caption {
+        font-size: 0.95rem;
+        padding: 1rem 1.2rem;
+        margin: 0 0.5rem;
+        max-width: 90%;
+    }
+    
+    .memory-navigation {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .memory-nav-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+    
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .related-memories {
+        padding: 2rem 1.5rem;
+    }
+    
+    .related-memories h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .memory-header h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .memory-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .gallery {
+        gap: 1.5rem;
+    }
+    
+    .photo,
+    .romantic-video {
+        height: 180px;
+    }
+    
+    .tall-image {
+        height: 250px !important;
+    }
+    
+    .gallery-caption {
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
+    }
+    
+    .close-modal {
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        width: 40px;
+        height: 40px;
+    }
+}

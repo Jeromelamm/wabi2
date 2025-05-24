@@ -1,0 +1,580 @@
+/* Special Letter Page Styles */
+
+.password-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--light), #fff);
+}
+
+.password-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Comic Neue', cursive;
+}
+
+/* Password form styling */
+.special-message-box {
+    background: white;
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 90%;
+    margin: 2rem auto;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.special-message-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.special-message-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-family: 'Comic Neue', cursive;
+}
+
+.special-message-box p {
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Comic Neue', cursive;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--dark);
+    font-weight: bold;
+    font-family: 'Comic Neue', cursive;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border: 3px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+    background: #f8f9fa;
+}
+
+.form-input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+    background: white;
+    transform: scale(1.02);
+}
+
+.form-hint {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 0.8rem;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Comic Neue', cursive;
+}
+
+.unlock-btn {
+    background: linear-gradient(135deg, var(--primary), #ff8a8a);
+    padding: 1.2rem 3rem;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+    font-family: 'Comic Neue', cursive;
+}
+
+.unlock-btn:hover {
+    background: linear-gradient(135deg, #ff5252, var(--primary));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+}
+
+.unlock-btn:active {
+    transform: translateY(-1px);
+}
+
+.error-message {
+    color: var(--primary);
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    display: none;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Shake animation for incorrect password */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* Special message content */
+.special-message {
+    min-height: 100vh;
+    padding: 2rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light), #fff);
+}
+
+.special-message.active {
+    display: flex;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.special-message h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Comic Neue', cursive;
+}
+
+/* Love letter styling */
+.love-letter {
+    max-width: 900px;
+    width: 95%;
+    background: white;
+    padding: 4rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    margin: 2rem auto;
+    position: relative;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.love-letter:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 3px dashed var(--primary);
+    border-radius: 15px;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.salutation {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+}
+
+.letter-content {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    white-space: pre-line;
+    font-family: 'Comic Neue', cursive;
+    color: var(--dark);
+}
+
+.signature {
+    font-size: 1.8rem;
+    color: var(--primary);
+    text-align: right;
+    margin-top: 2.5rem;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+}
+
+.heart-divider {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin: 2.5rem 0;
+    animation: pulse 2s infinite;
+}
+
+/* Gallery in letter */
+.special-message .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.special-message .gallery-item {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.special-message .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.special-message .gallery-item:nth-child(1) { animation-delay: 0.2s; }
+.special-message .gallery-item:nth-child(2) { animation-delay: 0.4s; }
+.special-message .gallery-item:nth-child(3) { animation-delay: 0.6s; }
+.special-message .gallery-item:nth-child(4) { animation-delay: 0.8s; }
+.special-message .gallery-item:nth-child(5) { animation-delay: 1.0s; }
+.special-message .gallery-item:nth-child(6) { animation-delay: 1.2s; }
+.special-message .gallery-item:nth-child(7) { animation-delay: 1.4s; }
+.special-message .gallery-item:nth-child(8) { animation-delay: 1.6s; }
+
+.special-message .photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.special-message .romantic-video {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 0;
+}
+
+.special-message .gallery-caption {
+    font-family: 'Comic Neue', cursive;
+    font-size: 0.95rem;
+    color: var(--dark);
+    text-align: center;
+    padding: 1rem 1.2rem;
+    background: linear-gradient(135deg, #ffeef1, #fff9f9);
+    line-height: 1.4;
+}
+
+/* Closing section */
+.closing {
+    font-size: 1.3rem;
+    color: var(--dark);
+    text-align: center;
+    margin: 2rem 0;
+    font-family: 'Comic Neue', cursive;
+    font-style: italic;
+}
+
+/* Interactive heart */
+.special-message .heart {
+    color: var(--primary);
+    font-size: 4rem;
+    margin: 2rem;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.special-message .heart:hover {
+    animation: pulse 0.7s infinite;
+    transform: scale(1.2);
+}
+
+/* Navigation options at bottom */
+.navigation-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+    max-width: 600px;
+}
+
+.navigation-options .btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--secondary), #6ae8e0);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+    font-family: 'Comic Neue', cursive;
+}
+
+.navigation-options .btn:hover {
+    background: linear-gradient(135deg, #6ae8e0, var(--secondary));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+}
+
+/* Confetti container */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    animation: fall linear forwards;
+    z-index: 1000;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Special effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .password-section,
+    .special-message {
+        padding: 1rem;
+    }
+    
+    .password-section h1,
+    .special-message h1 {
+        font-size: 2.5rem;
+    }
+    
+    .special-message-box {
+        padding: 2rem;
+        max-width: 100%;
+    }
+    
+    .form-title {
+        font-size: 1.8rem;
+    }
+    
+    .special-message-box p {
+        font-size: 1.1rem;
+    }
+    
+    .form-input {
+        font-size: 1.1rem;
+        padding: 1rem 1.2rem;
+    }
+    
+    .unlock-btn {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .love-letter {
+        padding: 2.5rem 2rem;
+        max-width: 100%;
+    }
+    
+    .salutation {
+        font-size: 1.5rem;
+    }
+    
+    .letter-content {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    
+    .signature {
+        font-size: 1.5rem;
+    }
+    
+    .heart-divider {
+        font-size: 2rem;
+    }
+    
+    .special-message .gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .navigation-options {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .navigation-options .btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .password-section h1,
+    .special-message h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .special-message-box {
+        padding: 1.5rem;
+    }
+    
+    .form-title {
+        font-size: 1.6rem;
+    }
+    
+    .special-message-box p {
+        font-size: 1rem;
+    }
+    
+    .love-letter {
+        padding: 2rem 1.5rem;
+    }
+    
+    .love-letter:before {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    .salutation {
+        font-size: 1.3rem;
+    }
+    
+    .letter-content {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .signature {
+        font-size: 1.3rem;
+    }
+    
+    .special-message .heart {
+        font-size: 3rem;
+    }
+    
+    .closing {
+        font-size: 1.1rem;
+    }
+}
+
+/* Print styles for the letter */
+@media print {
+    .password-section {
+        display: none !important;
+    }
+    
+    .special-message {
+        display: block !important;
+        padding: 0;
+        background: white;
+    }
+    
+    .navigation-options,
+    .heart,
+    .audio-control,
+    .main-nav,
+    .breadcrumb-nav {
+        display: none !important;
+    }
+    
+    .love-letter {
+        box-shadow: none;
+        max-width: 100%;
+        margin: 0;
+        page-break-inside: avoid;
+    }
+    
+    .love-letter:before {
+        border-color: #ccc;
+    }
+    
+    .gallery {
+        display: none !important;
+    }
+    
+    .heart-divider {
+        color: #333 !important;
+    }
+    
+    .salutation,
+    .signature {
+        color: #333 !important;
+    }
+}
